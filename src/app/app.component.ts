@@ -10,7 +10,7 @@ const clientId = "YOUR_WEB3AUTH_CLIENT_ID"; // get from https://dashboard.web3au
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
-  title = "angular-app";
+  title = 'angular-app';
   web3auth: Web3Auth | null = null;
   provider: SafeEventEmitterProvider | null = null;
   isModalLoaded = false;
@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
       clientId,
       chainConfig: {
         chainNamespace: CHAIN_NAMESPACES.EIP155,
-        chainId: "0x38",
-        rpcTarget: "https://bsc-dataseed.binance.org/", // This is the public RPC we have added, please pass on your own endpoint while creating an app
+        chainId: '0x38',
+        rpcTarget: 'https://bsc-dataseed.binance.org/'
       },
     });
     const web3auth = this.web3auth;
@@ -36,17 +36,17 @@ export class AppComponent implements OnInit {
 
   async login() {
     if (!this.web3auth) {
-      console.log("web3auth not initialized yet");
+      console.log('web3auth not initialized yet');
       return;
     }
     const web3auth = this.web3auth;
     this.provider = await web3auth.connect();
-    console.log("logged in");
+    console.log('logged in');
   };
 
   async getUserInfo() {
     if (!this.web3auth) {
-      console.log("web3auth not initialized yet");
+      console.log('web3auth not initialized yet');
       return;
     }
     const user = await this.web3auth.getUserInfo();
@@ -55,17 +55,17 @@ export class AppComponent implements OnInit {
 
   async logout() {
     if (!this.web3auth) {
-      console.log("web3auth not initialized yet");
+      console.log('web3auth not initialized yet');
       return;
     }
     await this.web3auth.logout();
     this.provider = null;
-    console.log("logged out");
+    console.log('logged out');
   };
 
   async getChainId() {
     if (!this.provider) {
-      console.log("provider not initialized yet");
+      console.log('provider not initialized yet');
       return;
     }
     const rpc = new RPC(this.provider);
@@ -75,7 +75,7 @@ export class AppComponent implements OnInit {
 
   async getAccounts() {
     if (!this.provider) {
-      console.log("provider not initialized yet");
+      console.log('provider not initialized yet');
       return;
     }
     const rpc = new RPC(this.provider);
@@ -85,7 +85,7 @@ export class AppComponent implements OnInit {
 
   async getBalance() {
     if (!this.provider) {
-      console.log("provider not initialized yet");
+      console.log('provider not initialized yet');
       return;
     }
     const rpc = new RPC(this.provider);
@@ -95,7 +95,7 @@ export class AppComponent implements OnInit {
 
   async sendTransaction() {
     if (!this.provider) {
-      console.log("provider not initialized yet");
+      console.log('provider not initialized yet');
       return;
     }
     const rpc = new RPC(this.provider);
@@ -105,7 +105,7 @@ export class AppComponent implements OnInit {
 
   async signMessage() {
     if (!this.provider) {
-      console.log("provider not initialized yet");
+      console.log('provider not initialized yet');
       return;
     }
     const rpc = new RPC(this.provider);
@@ -115,7 +115,7 @@ export class AppComponent implements OnInit {
 
   async getPrivateKey() {
     if (!this.provider) {
-      console.log("provider not initialized yet");
+      console.log('provider not initialized yet');
       return;
     }
     const rpc = new RPC(this.provider);
