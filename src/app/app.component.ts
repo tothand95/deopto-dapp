@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Web3Auth } from "@web3auth/modal";
-import { CHAIN_NAMESPACES, SafeEventEmitterProvider } from "@web3auth/base";
+import { CHAIN_NAMESPACES, SafeEventEmitterProvider, WALLET_ADAPTERS } from "@web3auth/base";
 import RPC from "./web3rpc";
-const clientId = "YOUR_WEB3AUTH_CLIENT_ID"; // get from https://dashboard.web3auth.io
+const clientId = "BFiHom4aOxXR-KBPyMCSCOcoRm4Ng_UhS6ATZmG72Iq3XdRQNjpZZ424MnHS3mH4prjTFV2CzXGax-WbT0We8tM"; // get from https://dashboard.web3auth.io
 
 @Component({
   selector: "app-root",
@@ -17,7 +17,14 @@ export class AppComponent implements OnInit {
 
   async ngOnInit() {
     this.web3auth = new Web3Auth({
+      authMode: 'DAPP',
       clientId,
+      storageKey: 'session',
+      uiConfig: {
+        theme: 'light',
+        appName: 'Deopto',
+        loginMethodsOrder: ['email_passwordless']
+      },
       chainConfig: {
         chainNamespace: CHAIN_NAMESPACES.EIP155,
         chainId: '0x38',
@@ -26,8 +33,41 @@ export class AppComponent implements OnInit {
     });
     const web3auth = this.web3auth;
 
+    await web3auth.initModal({
+      modalConfig: {
+        [WALLET_ADAPTERS.OPENLOGIN]: {
+          label: "openlogin",
+          showOnModal: false, // set to false to hide all social login from modal.
+          showOnDesktop: false,
+          showOnMobile: false
+        },
+        [WALLET_ADAPTERS.TORUS_EVM]: {
+          label: 'torus_evm',
+          showOnModal: false,
+          showOnDesktop: false,
+          showOnMobile: false
+        },
+        [WALLET_ADAPTERS.TORUS_SOLANA]: {
+          label: 'torus_solana',
+          showOnModal: false,
+          showOnDesktop: false,
+          showOnMobile: false
+        },
+        [WALLET_ADAPTERS.COINBASE]: {
+          label: 'coinbase',
+          showOnModal: true,
+          showOnDesktop: true,
+          showOnMobile: true
+        },
+        [WALLET_ADAPTERS.METAMASK]: {
+          label: 'metamask',
+          showOnModal: true,
+          showOnDesktop: true,
+          showOnMobile: true
+        }
+      }
+    });
 
-    await web3auth.initModal();
     if (web3auth.provider) {
       this.provider = web3auth.provider;
     }
