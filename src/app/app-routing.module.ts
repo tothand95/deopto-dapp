@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TodoComponent } from './components/todo/todo.component';
+import { ConnectWalletComponent } from './components/connect-wallet/connect-wallet.component';
 
 const routes: Routes = [
   {
-    path: '', component: TodoComponent
+    path: '', component: ConnectWalletComponent
   }
 ];
 
