@@ -2607,10 +2607,6 @@
   --_12cbo8i1: 1;
 }
 
-[data-rk] ._12cbo8i3:hover {
-  transform: scale(var(--_12cbo8i0));
-}
-
 [data-rk] ._12cbo8i3:active {
   transform: scale(var(--_12cbo8i1));
 }
