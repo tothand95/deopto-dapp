@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RenderReactDirective } from './directives/render-react.directive';
+import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RenderReactDirective
+    RenderReactDirective,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

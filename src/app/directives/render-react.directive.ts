@@ -3,7 +3,7 @@ import { ElementType, ComponentProps, createElement } from 'react';
 import { createRoot } from 'react-dom/client';
 
 @Directive({
-  selector: '[appRenderReact]'
+  selector: '[renderReact]'
 })
 export class RenderReactDirective<Comp extends ElementType> {
   @Input() reactComponent: Comp;
