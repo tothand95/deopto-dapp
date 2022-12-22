@@ -19,13 +19,11 @@
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
     "@rainbow-me/rainbowkit": "^0.8.1",
-    "ethers": "^5.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-select": "^5.7.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "wagmi": "^0.9.5",
     "web3": "^1.8.1",
     "zone.js": "~0.12.0"
   },
