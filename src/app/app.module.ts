@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RenderReactDirective } from './directives/render-react.directive';
-import { TodoComponent } from './components/todo/todo.component';
+import { ConnectWalletComponent } from './components/connect-wallet/connect-wallet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RenderReactDirective,
-    TodoComponent
+    ConnectWalletComponent
   ],
   imports: [
     BrowserModule,

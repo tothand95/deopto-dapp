@@ -3,10 +3,10 @@ import type { ComponentProps } from 'react';
 import { ConnectWallet } from 'src/app/components-react/connect-wallet';
 
 @Component({
-  selector: 'app-todo',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.scss']
+  selector: 'app-connect-wallet',
+  templateUrl: './connect-wallet.component.html',
+  styleUrls: ['./connect-wallet.component.scss']
 })
-export class TodoComponent {
+export class ConnectWalletComponent {
   ConnectWallet = ConnectWallet;
 }
