@@ -1,5 +1,5 @@
 import { Directive, ElementRef, inject, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
-import { ElementType, ComponentProps, createElement } from 'react';
+import { ElementType, createElement } from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 
 @Directive({
@@ -7,7 +7,6 @@ import { render, unmountComponentAtNode } from 'react-dom';
 })
 export class RenderReactDirective<Comp extends ElementType> implements OnInit, OnChanges, OnDestroy {
   @Input() reactComponent: Comp;
-  @Input() props: ComponentProps<Comp>;
 
   private root = inject(ElementRef).nativeElement;
 
@@ -24,6 +23,6 @@ export class RenderReactDirective<Comp extends ElementType> implements OnInit, O
   }
 
   private renderReactComp() {
-    render(createElement(this.reactComponent, this.props), this.root);
+    render(createElement(this.reactComponent), this.root);
   }
 }

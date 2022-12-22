@@ -1,6 +1,6 @@
-import Select from 'react-select';
 import { Component } from '@angular/core';
 import type { ComponentProps } from 'react';
+import { ConnectWallet } from 'src/app/components-react/connect-wallet';
 
 @Component({
   selector: 'app-todo',
@@ -8,22 +8,5 @@ import type { ComponentProps } from 'react';
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent {
-  Select = Select;
-  selectProps: ComponentProps<Select> = {
-    onChange(v) {
-      console.log(v)
-    },
-    options: [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' }
-    ]
-  }
-  
-  changeProps() {
-    this.selectProps = {
-      ...this.selectProps,
-      options: [{ value: 'changed', label: 'Changed' }]
-    }
-  }
+  ConnectWallet = ConnectWallet;
 }
