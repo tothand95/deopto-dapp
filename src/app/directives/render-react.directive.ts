@@ -1,22 +1,29 @@
-import { Directive, ElementRef, inject, Input } from '@angular/core';
+import { Directive, ElementRef, inject, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { ElementType, ComponentProps, createElement } from 'react';
-import { createRoot } from 'react-dom/client';
+import { render, unmountComponentAtNode } from 'react-dom';
 
 @Directive({
   selector: '[renderReact]'
 })
-export class RenderReactDirective<Comp extends ElementType> {
+export class RenderReactDirective<Comp extends ElementType> implements OnInit, OnChanges, OnDestroy {
   @Input() reactComponent: Comp;
   @Input() props: ComponentProps<Comp>;
 
-  private root = createRoot(inject(ElementRef).nativeElement)
+  private root = inject(ElementRef).nativeElement;
+
+  ngOnInit() {
+    this.renderReactComp();
+  }
 
   ngOnChanges() {
-    this.root.render(createElement(this.reactComponent, this.props))
+    this.renderReactComp();
   }
 
   ngOnDestroy() {
-    this.root.unmount();
+    unmountComponentAtNode(this.root);
   }
 
+  private renderReactComp() {
+    render(createElement(this.reactComponent, this.props), this.root);
+  }
 }
