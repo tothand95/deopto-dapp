@@ -3,10 +3,10 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import * as Rainbow from '@rainbow-me/rainbowkit';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import { bsc, bscTestnet, mainnet } from 'wagmi/chains'
+import { bsc } from 'wagmi/chains'
 
 const { chains, provider } = configureChains(
-  [bsc, mainnet, bscTestnet],
+  [bsc],
   [
     alchemyProvider({ apiKey: process.env.ALCHEMY_ID as string }),
     publicProvider()
