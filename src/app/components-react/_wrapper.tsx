@@ -1,7 +1,6 @@
 import React from 'react';
-import { bsc } from 'wagmi/chains'
+import { bsc } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { ThemeOptions } from '@rainbow-me/rainbowkit/dist/themes/baseTheme';
 import { RainbowKitProvider, connectorsForWallets, darkTheme } from '@rainbow-me/rainbowkit';
@@ -10,7 +9,7 @@ import { ConnectWallet } from './connect-wallet';
 
 const appName = 'Deopto';
 
-const { chains, provider } = configureChains(
+const { chains, provider, webSocketProvider } = configureChains(
   [bsc],
   [publicProvider()]
 );
@@ -42,7 +41,8 @@ const connectors = connectorsForWallets([
 const wagmiClient = createClient({
   autoConnect: true,
   connectors,
-  provider
+  provider,
+  webSocketProvider
 });
 
 const themeOptions: ThemeOptions = {
@@ -54,14 +54,9 @@ const themeOptions: ThemeOptions = {
 export const VoteWrapper = () => {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider
-        chains={chains}
-        initialChain={bsc}
-        modalSize='wide'
-        theme={darkTheme(themeOptions)}
-      >
+      <RainbowKitProvider modalSize='wide' theme={darkTheme(themeOptions)} chains={chains} initialChain={bsc}>
         <ConnectWallet></ConnectWallet>
       </RainbowKitProvider>
     </WagmiConfig>
-  )
-}
+  );
+};
