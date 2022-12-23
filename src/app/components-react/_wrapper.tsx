@@ -1,16 +1,17 @@
 import React from 'react';
-import { bsc } from 'wagmi/chains';
+import { bsc, bscTestnet } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { ThemeOptions } from '@rainbow-me/rainbowkit/dist/themes/baseTheme';
 import { RainbowKitProvider, connectorsForWallets, darkTheme } from '@rainbow-me/rainbowkit';
 import { braveWallet, coinbaseWallet, ledgerWallet, trustWallet, metaMaskWallet, walletConnectWallet, injectedWallet, rainbowWallet, omniWallet, imTokenWallet, argentWallet } from '@rainbow-me/rainbowkit/wallets';
+import { Poll } from './poll';
 import { ConnectWallet } from './connect-wallet';
 
 const appName = 'Deopto';
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [bsc],
+  [bsc, bscTestnet],
   [publicProvider()]
 );
 
@@ -56,6 +57,7 @@ export const VoteWrapper = () => {
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider modalSize='wide' theme={darkTheme(themeOptions)} chains={chains} initialChain={bsc}>
         <ConnectWallet></ConnectWallet>
+        <Poll></Poll>
       </RainbowKitProvider>
     </WagmiConfig>
   );
