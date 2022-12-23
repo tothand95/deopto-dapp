@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RenderReactDirective } from './directives/render-react.directive';
-import { ConnectWalletComponent } from './components/connect-wallet/connect-wallet.component';
+import { VoteComponent } from './components/vote/vote.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RenderReactDirective,
-    ConnectWalletComponent
+    VoteComponent
   ],
   imports: [
     BrowserModule,
