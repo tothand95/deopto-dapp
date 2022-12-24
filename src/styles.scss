@@ -1,3 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'src/app/components-react/connect-wallet.css';
+@import url("https://fonts.cdnfonts.com/css/bai-jamjuree");
+@import 'src/app/components-react/rainbowkit-modal.css';
+@import "src/variables.scss";
+
+/* You can add shared styles to this file, and reference it from other files */
+
+.button {
+  cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.deopto-button {
+  margin: 1rem;
+  padding: 0.4rem 4rem;
+  background-color: transparent;
+  color: $base-purple;
+  border: 3px solid $base-purple;
+  border-radius: 40px;
+
+  font-weight: bold;
+  font-size: large;
+
+  &:hover {
+    background-color: $pink-highlight;
+  }
+}
+
+.deopto-paragraph {
+  color: $base-purple;
+  padding: 0.4rem 0.75rem;
+  font-weight: bold;
+  border: 0px;
+  font-size: large;
+}
