@@ -41,8 +41,8 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
         </div>
       }
       {
-        pollTitleResult.isSuccess && pollOptionsResult.isSuccess &&
-        <div className='deopto-paragraph'>
+        pollTitleResult.isError && pollOptionsResult.isError &&
+        <div className='poll-paragraph'>
           There was an error while fetching data
         </div>
       }

@@ -3,6 +3,7 @@
 @import url("https://fonts.cdnfonts.com/css/bai-jamjuree");
 @import "src/app/components-react/rainbowkit-modal.css";
 @import "src/variables.scss";
+@import "src/styles-for-react.scss";
 
 /* You can add shared styles to this file, and reference it from other files */
 
@@ -33,82 +34,5 @@
 
   &:hover {
     background-color: $pink-highlight;
-  }
-}
-
-.deopto-paragraph {
-  color: $base-purple;
-  padding: 0.4rem 0.75rem;
-  font-weight: bold;
-  border: 0px;
-  font-size: large;
-}
-
-.poll-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 50rem;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.poll-title {
-  margin: 1rem;
-  padding-bottom: 1rem;
-  border: 0px;
-  max-width: 55rem;
-
-  color: black;
-  font-weight: bold;
-  font-size: x-large;
-  text-align: center;
-}
-
-//--------------------------------
-// Loading indicator animation
-//--------------------------------
-
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid $base-purple;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: $base-purple transparent transparent transparent;
-}
-
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }

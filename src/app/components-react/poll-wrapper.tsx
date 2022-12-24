@@ -18,7 +18,7 @@ export const PollWrapper = () => {
     <>
       {
         isLoading &&
-        <div className='deopto-paragraph'>
+        <div className='poll-paragraph'>
           Getting current poll data from Smart Contract
           <LoadingIndicator></LoadingIndicator>
         </div>
@@ -29,7 +29,7 @@ export const PollWrapper = () => {
       }
       {
         isError &&
-        <div className='deopto-paragraph'>
+        <div className='poll-paragraph'>
           There was an error while fetching data
           {error}
         </div>
