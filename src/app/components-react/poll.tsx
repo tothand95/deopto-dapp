@@ -1,23 +1,51 @@
 import React from 'react';
-import { BigNumber } from 'ethers';
 import { useContractRead } from 'wagmi';
 import deoptoAbi from 'src/assets/deopto.abi.json'
+import { contractAddressTest } from './constants';
+import { LoadingIndicator } from './loading-indicator';
 
-export const Poll = () => {
-  const contractAddressLive = '0xF918C5f9fcee3FFE7C27612e76eB2d27AA357e90';
-  const contractAddressTest = '0xfa21e1efb2dd73826c7c53fc0a0a3ab13c2de06c';
+interface PollComponentInputs {
+  pollIndex: number;
+}
 
-  const { data, error, isError, isLoading, status } = useContractRead({
-    address: contractAddressLive,
+export const Poll = ({ pollIndex }: PollComponentInputs) => {
+
+  const pollTitleResult = useContractRead({
+    address: contractAddressTest,
     abi: deoptoAbi,
-    functionName: 'decimals',
+    functionName: 'getPollTitle',
+    args: [pollIndex]
   });
-  console.log(data);
+
+  const pollOptionsResult = useContractRead({
+    address: contractAddressTest,
+    abi: deoptoAbi,
+    functionName: 'getPollOptions',
+    args: [pollIndex]
+  });
+
   return (
-    <>
-      <div className='deopto-paragraph'>{isLoading ? 'true' : 'false'}</div>
-      <div className='deopto-paragraph'>{isError ? 'true' : 'false'}</div>
-      <div className='deopto-paragraph'>{status}</div>
-    </>
+    <div className='poll-container'>
+      {
+        (pollTitleResult.isLoading || pollOptionsResult.isLoading) && <LoadingIndicator></LoadingIndicator>
+      }
+      {
+        pollTitleResult.isSuccess && pollOptionsResult.isSuccess &&
+        <div>
+          <div className='poll-title'>{pollTitleResult.data}</div>
+          {
+            (pollOptionsResult.data as string[]).map((item) => {
+              return <div>{item}</div>
+            })
+          }
+        </div>
+      }
+      {
+        pollTitleResult.isSuccess && pollOptionsResult.isSuccess &&
+        <div className='deopto-paragraph'>
+          There was an error while fetching data
+        </div>
+      }
+    </div>
   );
 };
