@@ -3,6 +3,8 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export const ConnectWallet = () => {
   return (
-    <ConnectButton showBalance={false} chainStatus={'full'}></ConnectButton>
+    <div className='connect-button-container'>
+      <ConnectButton showBalance={false} chainStatus={'full'}></ConnectButton>
+    </div>
   );
 };
