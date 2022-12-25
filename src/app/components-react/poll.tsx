@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContractRead } from 'wagmi';
 import deoptoAbi from 'src/assets/deopto.abi.json'
 import { contractAddressTest } from './constants';
@@ -8,7 +8,13 @@ interface PollComponentInputs {
   pollIndex: number;
 }
 
+interface PollOption {
+  name: string;
+  isSelected: boolean;
+}
+
 export const Poll = ({ pollIndex }: PollComponentInputs) => {
+  const [pollOptions, setPollOptions] = useState([] as PollOption[]);
 
   const pollTitleResult = useContractRead({
     address: contractAddressTest,
@@ -21,8 +27,22 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
     address: contractAddressTest,
     abi: deoptoAbi,
     functionName: 'getPollOptions',
-    args: [pollIndex]
+    args: [pollIndex],
+    onSuccess(data) {
+      setPollOptions((data as string[]).map((item) => {
+        return { name: item, isSelected: false } as PollOption;
+      }) as any);
+    },
   });
+
+  function selectOption(option: PollOption) {
+    let pollOptionsNew = pollOptions.map((item) => {
+      item.isSelected = item.name === option.name;
+      return item;
+    });
+
+    setPollOptions(pollOptionsNew);
+  }
 
   return (
     <div className='poll-container'>
@@ -31,14 +51,19 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
       }
       {
         pollTitleResult.isSuccess && pollOptionsResult.isSuccess &&
-        <div>
+        <>
           <div className='poll-title'>{pollTitleResult.data}</div>
           {
-            (pollOptionsResult.data as string[]).map((item) => {
-              return <div>{item}</div>
+            pollOptions.map((item, index) => {
+              return <div
+                key={'option' + index}
+                className={`poll-option ${item.isSelected ? 'poll-option-selected' : ''}`}
+                onClick={() => selectOption(item)}>
+                {item.name}
+              </div>
             })
           }
-        </div>
+        </>
       }
       {
         pollTitleResult.isError && pollOptionsResult.isError &&
@@ -46,6 +71,6 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
           There was an error while fetching data
         </div>
       }
-    </div>
+    </div >
   );
 };

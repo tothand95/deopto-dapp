@@ -11,7 +11,7 @@ import { ConnectWallet } from './connect-wallet';
 const appName = 'Deopto';
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [ bscTestnet],
+  [bscTestnet],
   [publicProvider()]
 );
 
