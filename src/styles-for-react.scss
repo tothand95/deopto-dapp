@@ -1,4 +1,4 @@
-.connect-button-container{
+.connect-button-container {
   display: flex;
   justify-content: flex-end;
 }
@@ -9,7 +9,7 @@
 }
 
 .poll-paragraph {
-  color: $base-purple;
+  color: $primary-color;
   padding: 0.4rem 0.75rem;
   font-weight: bold;
   border: 0px;
@@ -31,7 +31,6 @@
   margin: 1rem;
   padding-bottom: 1rem;
   border: 0px;
-  max-width: 45rem;
 
   color: black;
   font-weight: bold;
@@ -40,22 +39,55 @@
 }
 
 .poll-option {
-  margin: 0.25rem;
+  margin: 0.375rem;
   padding: 0.5rem;
   border: 0.125rem solid lightgray;
   border-radius: 5rem;
   cursor: pointer;
   font-weight: 500;
   text-align: center;
+  font-size: large;
 }
 
 .poll-option-selected {
   background-image: linear-gradient(
     to right,
-    rgba($color: $base-purple, $alpha: 0.5),
-    transparent 40% 60%,
-    rgba($color: $blue-highlight, $alpha: 0.5)
+    rgba($color: $highlight-color, $alpha: 0.5),
+    rgba($color: $highlight-color, $alpha: 0.1) 40% 60%,
+    rgba($color: $highlight-color, $alpha: 0.5)
   );
+}
+
+.poll-notification-error {
+  align-self: center;
+  font-family: "Cascadia Code", sans-serif;
+  font-size: medium;
+
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+
+  background-color: lightcoral;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+}
+
+.poll-notification-header {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.poll-notification-success {
+  @extend .poll-notification-error;
+
+  background-color: lightgreen;
+}
+
+.vote-button-container {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 // ---------------------------
@@ -86,10 +118,10 @@
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid $base-purple;
+  border: 8px solid $primary-color;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: $base-purple transparent transparent transparent;
+  border-color: $primary-color transparent transparent transparent;
 }
 
 .lds-ring div:nth-child(1) {

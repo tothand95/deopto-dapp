@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useContractRead } from 'wagmi';
+import React, { useCallback, useState } from 'react';
+import { useContractRead, useContractWrite, usePrepareContractWrite } from 'wagmi';
 import deoptoAbi from 'src/assets/deopto.abi.json'
 import { contractAddressTest } from './constants';
 import { LoadingIndicator } from './loading-indicator';
@@ -15,6 +15,8 @@ interface PollOption {
 
 export const Poll = ({ pollIndex }: PollComponentInputs) => {
   const [pollOptions, setPollOptions] = useState([] as PollOption[]);
+  const [voteTransactionError, setVoteTransactionError] = useState('');
+  const [voteTransactionSuccess, setVoteTransactionSuccess] = useState('');
 
   const pollTitleResult = useContractRead({
     address: contractAddressTest,
@@ -40,9 +42,32 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
       item.isSelected = item.name === option.name;
       return item;
     });
+    console.log(pollOptions);
 
     setPollOptions(pollOptionsNew);
   }
+
+  const sendVoteResult = useContractWrite({
+    address: contractAddressTest,
+    abi: deoptoAbi,
+    functionName: 'vote',
+    mode: 'recklesslyUnprepared',
+    args: [pollOptions.filter(item => item.isSelected).pop()?.name],
+    onSuccess(_data) {
+      setVoteTransactionError('Thank you for participating! Your Voting Power will be calculated when the poll ends.');
+    },
+    onError(error: any) {
+      setVoteTransactionError(error.reason);
+    }
+  });
+
+  const sendVoteRequest = () => {
+    setVoteTransactionError('');
+    setVoteTransactionSuccess('');
+    if (pollOptions.filter(item => item.isSelected).length === 1) {
+      (sendVoteResult as any).write();
+    }
+  };
 
   return (
     <div className='poll-container'>
@@ -63,12 +88,29 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
               </div>
             })
           }
+          <div className='vote-button-container'>
+            <button className='deopto-button' onClick={sendVoteRequest}>Send vote!</button>
+          </div>
         </>
       }
       {
         pollTitleResult.isError && pollOptionsResult.isError &&
         <div className='poll-paragraph'>
           There was an error while fetching data
+        </div>
+      }
+      {
+        voteTransactionError &&
+        <div className='poll-notification-error'>
+          <div className='poll-notification-header'> ❕ Error </div>
+          <div>{voteTransactionError}</div>
+        </div>
+      }
+      {
+        voteTransactionSuccess &&
+        <div className='poll-notification-success'>
+          <div className='poll-notification-header'> ❕ Success </div>
+          <div>{voteTransactionSuccess}</div>
         </div>
       }
     </div >
