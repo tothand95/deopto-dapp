@@ -1,2 +1,17 @@
+<header [ngClass]="{ 'sticky': !onTop }">
+  <div class="logo-container">
+    <img class="logo-image" src="assets/deopto-logo.svg" alt="DEOPTO">
+    <span class="logo-text">DEOPTO</span>
+  </div>
+  <ul>
+    <li class='menu-point'>Home</li>
+    <li class='menu-point'>Voting Procedure</li>
+    <li class='menu-point'>Whitepaper</li>
+    <li class='menu-point'>Team</li>
+    <li class='menu-point'>Roadmap</li>
+  </ul>
+</header>
+
+<div class="header-dummy"></div>
 
 <router-outlet></router-outlet>
