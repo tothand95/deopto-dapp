@@ -4,12 +4,12 @@
     <span class="logo-text">DEOPTO</span>
   </div>
   <ul>
-    <li class='menu-point'>Home</li>
-    <li class='menu-point'>Voting Procedure</li>
-    <li class='menu-point'>Whitepaper</li>
+    <li class='menu-point' (click)="navigateTo('home')">Home</li>
+    <li class='menu-point' (click)="navigateTo('voting-procedure')">Voting Procedure</li>
+    <li class='menu-point' (click)="navigateTo('whitepaper')">Whitepaper</li>
     <li class='menu-point'>Team</li>
-    <li class='menu-point'>Roadmap</li>
-    <li class='menu-point menu-vote'>Let's vote</li>
+    <li class='menu-point' (click)="navigateTo('roadmap')">Roadmap</li>
+    <li class='menu-point menu-vote' (click)="navigateTo('vote')">Let's vote</li>
   </ul>
 </header>
 

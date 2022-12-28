@@ -8,10 +8,12 @@ import { WhitepaperComponent } from './components/whitepaper/whitepaper.componen
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home', redirectTo: '' },
   { path: 'vote', component: VoteComponent },
   { path: 'whitepaper', component: WhitepaperComponent },
   { path: 'voting-procedure', component: VotingProcedureComponent },
-  { path: 'roadmap', component: RoadmapComponent }
+  { path: 'roadmap', component: RoadmapComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
