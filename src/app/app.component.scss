@@ -3,6 +3,7 @@
 // ---------------------
 
 $header-height: 5rem;
+$header-padding: 1.25rem;
 
 header {
   position: fixed;
@@ -10,18 +11,23 @@ header {
   left: 0;
   width: 100%;
   height: $header-height;
-  padding: 1.25rem 0rem;
+  padding: $header-padding 0rem;
   z-index: 999;
 
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 
-  transition: 0.6s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+
+  background-color: rgba(black, 0.7);
 
   &.sticky {
     padding: 0px 0px;
-    background: #fff;
+    background-color: white;
   }
 
   &.sticky .logo-text {
@@ -91,7 +97,7 @@ header .menu-point {
 }
 
 .header-dummy {
-  height: $header-height;
+  height: $header-height + 2 * $header-padding;
 }
 
 .banner {
