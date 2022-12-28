@@ -8,6 +8,16 @@
 
 /* You can add shared styles to this file, and reference it from other files */
 
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(1.00);
+  opacity: 0.3;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;

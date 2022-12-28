@@ -3,13 +3,13 @@ import { BigNumber } from 'ethers';
 import { useContractRead } from 'wagmi';
 import deoptoAbi from 'src/assets/deopto.abi.json'
 import { LoadingIndicator } from './loading-indicator';
-import { contractAddressTest } from './constants';
+import { contractAddressLive, contractAddressTest } from './constants';
 import { Poll } from './poll';
 
 export const PollWrapper = () => {
 
   const { data, isLoading, isSuccess, isError, error } = useContractRead({
-    address: contractAddressTest,
+    address: contractAddressLive,
     abi: deoptoAbi,
     functionName: 'getCurrentPollIndex',
   });

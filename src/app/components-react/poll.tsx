@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { ConnectorNotFoundError, useContractRead, useContractWrite, useNetwork, useSwitchNetwork } from 'wagmi';
 import deoptoAbi from 'src/assets/deopto.abi.json'
-import { contractAddressTest } from './constants';
+import { contractAddressLive, contractAddressTest } from './constants';
 import { LoadingIndicator } from './loading-indicator';
 import { bsc } from 'wagmi/chains';
 
@@ -25,14 +25,14 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
   const [voteTransactionSuccess, setVoteTransactionSuccess] = useState('');
 
   const pollTitleResult = useContractRead({
-    address: contractAddressTest,
+    address: contractAddressLive,
     abi: deoptoAbi,
     functionName: 'getPollTitle',
     args: [pollIndex]
   });
 
   const pollOptionsResult = useContractRead({
-    address: contractAddressTest,
+    address: contractAddressLive,
     abi: deoptoAbi,
     functionName: 'getPollOptions',
     args: [pollIndex],
@@ -54,7 +54,7 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
   }
 
   const sendVoteResult = useContractWrite({
-    address: contractAddressTest,
+    address: contractAddressLive,
     abi: deoptoAbi,
     functionName: 'vote',
     mode: 'recklesslyUnprepared',
@@ -109,13 +109,10 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
           }
           <div className='vote-button-container'>
             {
-              chain?.id === bnbChainId &&
-              <button className='deopto-button' onClick={sendVoteRequest}>Send vote!</button>
-            }
-            {
               chain?.id !== bnbChainId &&
               <button className='deopto-button' onClick={changeNetwork}>Change network</button>
             }
+            <button className='deopto-button' disabled={chain?.id !== bnbChainId} onClick={sendVoteRequest}>Send vote!</button>
           </div>
         </>
       }
