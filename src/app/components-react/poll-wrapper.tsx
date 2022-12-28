@@ -18,9 +18,11 @@ export const PollWrapper = () => {
     <div className='poll-root'>
       {
         isLoading &&
-        <div className='poll-paragraph'>
-          Getting current poll data from Smart Contract
+        <div className='poll-container poll-text-center'>
           <LoadingIndicator></LoadingIndicator>
+          <div className='poll-paragraph'>
+            Getting current poll data from Smart Contract
+          </div>
         </div>
       }
       {

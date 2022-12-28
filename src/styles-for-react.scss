@@ -16,6 +16,10 @@
   font-size: large;
 }
 
+.poll-text-center {
+  text-align: center;
+}
+
 .poll-container {
   display: flex;
   flex-direction: column;
@@ -41,7 +45,7 @@
 .poll-option {
   margin: 0.375rem;
   padding: 0.5rem;
-  border: 0.125rem solid lightgray;
+  border: 1px solid black;
   border-radius: 5rem;
   cursor: pointer;
   font-weight: 500;
@@ -50,18 +54,17 @@
 }
 
 .poll-option-selected {
-  background-image: linear-gradient(
-    to right,
-    rgba($color: $highlight-color, $alpha: 0.5),
-    rgba($color: $highlight-color, $alpha: 0.1) 40% 60%,
-    rgba($color: $highlight-color, $alpha: 0.5)
-  );
+  background-image: linear-gradient(to right,
+      rgba($color: $highlight-color, $alpha: 0.5),
+      rgba($color: $highlight-color, $alpha: 0.1) 40% 60%,
+      rgba($color: $highlight-color, $alpha: 0.5));
 }
 
 .poll-notification-error {
   align-self: center;
   font-family: "Cascadia Code", sans-serif;
   font-size: medium;
+  white-space: pre-line;
 
   margin-top: 1.5rem;
   padding: 0.75rem 1rem;
@@ -109,6 +112,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  align-self: center;
 }
 
 .lds-ring div {

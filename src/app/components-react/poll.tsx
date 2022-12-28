@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { useContractRead, useContractWrite, usePrepareContractWrite } from 'wagmi';
+import { ConnectorNotFoundError, useContractRead, useContractWrite, usePrepareContractWrite } from 'wagmi';
 import deoptoAbi from 'src/assets/deopto.abi.json'
 import { contractAddressTest } from './constants';
 import { LoadingIndicator } from './loading-indicator';
@@ -54,10 +54,16 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
     mode: 'recklesslyUnprepared',
     args: [pollOptions.filter(item => item.isSelected).pop()?.name],
     onSuccess(_data) {
-      setVoteTransactionError('Thank you for participating! Your Voting Power will be calculated when the poll ends.');
+      setVoteTransactionSuccess('Thank you for participating! Your Voting Power will be calculated when the poll ends.');
     },
     onError(error: any) {
-      setVoteTransactionError(error.reason);
+      if (error.reason) {
+        console.log(error);
+        setVoteTransactionError(error.reason);
+      }
+      if (error instanceof ConnectorNotFoundError) {
+        setVoteTransactionError('You have to connect your wallet first to vote!\nPlease use the "Connect Wallet" button on top.');
+      }
     }
   });
 
@@ -102,14 +108,14 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
       {
         voteTransactionError &&
         <div className='poll-notification-error'>
-          <div className='poll-notification-header'> ❕ Error </div>
+          <div className='poll-notification-header'> ⬛ Error ⬛ </div>
           <div>{voteTransactionError}</div>
         </div>
       }
       {
         voteTransactionSuccess &&
         <div className='poll-notification-success'>
-          <div className='poll-notification-header'> ❕ Success </div>
+          <div className='poll-notification-header'> ⬛ Success ⬛ </div>
           <div>{voteTransactionSuccess}</div>
         </div>
       }
