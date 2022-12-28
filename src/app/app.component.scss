@@ -99,14 +99,3 @@ header .menu-point {
 .header-dummy {
   height: $header-height + 2 * $header-padding;
 }
-
-.banner {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url('/assets/home-background.svg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
