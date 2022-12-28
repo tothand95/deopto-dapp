@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VoteWrapper } from 'src/app/components-react/_wrapper';
+import { VoteRoot } from 'src/app/components-react/_root';
 
 @Component({
   selector: 'app-vote',
@@ -7,5 +7,5 @@ import { VoteWrapper } from 'src/app/components-react/_wrapper';
   styleUrls: ['./vote.component.scss']
 })
 export class VoteComponent {
-  VoteWrapper = VoteWrapper;
+  VoteRoot = VoteRoot;
 }

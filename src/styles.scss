@@ -1,13 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url("https://fonts.cdnfonts.com/css/bai-jamjuree");
-@import 'src/app/components-react/rainbowkit-modal.css';
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+@import "src/app/components-react/rainbowkit-modal.css";
 @import "src/variables.scss";
+@import "src/styles-for-react.scss";
 
 /* You can add shared styles to this file, and reference it from other files */
 
-.button {
+button {
   cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(1.00);
+  opacity: 0.3;
 }
 
 .flex-container {
@@ -21,25 +29,17 @@
 }
 
 .deopto-button {
-  margin: 1rem;
+  margin: 0.375rem;
   padding: 0.4rem 4rem;
   background-color: transparent;
-  color: $base-purple;
-  border: 3px solid $base-purple;
+  color: $primary-color;
+  border: 3px solid $primary-color;
   border-radius: 40px;
 
   font-weight: bold;
   font-size: large;
 
   &:hover {
-    background-color: $pink-highlight;
+    background-color: rgba($color: $primary-color-faded, $alpha: 0.5);
   }
-}
-
-.deopto-paragraph {
-  color: $base-purple;
-  padding: 0.4rem 0.75rem;
-  font-weight: bold;
-  border: 0px;
-  font-size: large;
 }

@@ -1,23 +1,141 @@
 import React from 'react';
-import { BigNumber } from 'ethers';
-import { useContractRead } from 'wagmi';
+import { useState } from 'react';
+import { ConnectorNotFoundError, useContractRead, useContractWrite, useNetwork, useSwitchNetwork } from 'wagmi';
 import deoptoAbi from 'src/assets/deopto.abi.json'
+import { contractAddressLive, contractAddressTest } from './constants';
+import { LoadingIndicator } from './loading-indicator';
+import { bsc } from 'wagmi/chains';
 
-export const Poll = () => {
-  const contractAddressLive = '0xF918C5f9fcee3FFE7C27612e76eB2d27AA357e90';
-  const contractAddressTest = '0xfa21e1efb2dd73826c7c53fc0a0a3ab13c2de06c';
+interface PollComponentInputs {
+  pollIndex: number;
+}
 
-  const { data, error, isError, isLoading, status } = useContractRead({
+interface PollOption {
+  name: string;
+  isSelected: boolean;
+}
+
+export const Poll = ({ pollIndex }: PollComponentInputs) => {
+  const bnbChainId = bsc.id;
+  const { chain } = useNetwork();
+  const { switchNetwork } = useSwitchNetwork();
+
+  const [pollOptions, setPollOptions] = useState([] as PollOption[]);
+  const [voteTransactionError, setVoteTransactionError] = useState('');
+  const [voteTransactionSuccess, setVoteTransactionSuccess] = useState('');
+
+  const pollTitleResult = useContractRead({
     address: contractAddressLive,
     abi: deoptoAbi,
-    functionName: 'decimals',
+    functionName: 'getPollTitle',
+    args: [pollIndex]
   });
-  console.log(data);
+
+  const pollOptionsResult = useContractRead({
+    address: contractAddressLive,
+    abi: deoptoAbi,
+    functionName: 'getPollOptions',
+    args: [pollIndex],
+    onSuccess(data) {
+      setPollOptions((data as string[]).map((item) => {
+        return { name: item, isSelected: false } as PollOption;
+      }) as any);
+    },
+  });
+
+  function selectOption(option: PollOption) {
+    let pollOptionsNew = pollOptions.map((item) => {
+      item.isSelected = item.name === option.name;
+      return item;
+    });
+    console.log(pollOptions);
+
+    setPollOptions(pollOptionsNew);
+  }
+
+  const sendVoteResult = useContractWrite({
+    address: contractAddressLive,
+    abi: deoptoAbi,
+    functionName: 'vote',
+    mode: 'recklesslyUnprepared',
+    args: [pollOptions.filter(item => item.isSelected).pop()?.name],
+    onSuccess(_data) {
+      setVoteTransactionSuccess('Thank you for participating! Your Voting Power will be calculated when the poll ends.');
+    },
+    onError(error: any) {
+      if (error.reason) {
+        console.log(error);
+        setVoteTransactionError(error.reason);
+      }
+      if (error instanceof ConnectorNotFoundError) {
+        setVoteTransactionError('You have to connect your wallet first to vote!\nPlease use the "Connect Wallet" button on top.');
+      }
+    }
+  });
+
+  const sendVoteRequest = () => {
+    if (chain?.id !== bnbChainId) {
+      return;
+    }
+    setVoteTransactionError('');
+    setVoteTransactionSuccess('');
+    if (pollOptions.filter(item => item.isSelected).length === 1) {
+      (sendVoteResult as any).write();
+    }
+  };
+
+  const changeNetwork = () => {
+    switchNetwork?.(bnbChainId);
+  };
+
   return (
-    <>
-      <div className='deopto-paragraph'>{isLoading ? 'true' : 'false'}</div>
-      <div className='deopto-paragraph'>{isError ? 'true' : 'false'}</div>
-      <div className='deopto-paragraph'>{status}</div>
-    </>
+    <div className='poll-container'>
+      {
+        (pollTitleResult.isLoading || pollOptionsResult.isLoading) && <LoadingIndicator></LoadingIndicator>
+      }
+      {
+        pollTitleResult.isSuccess && pollOptionsResult.isSuccess &&
+        <>
+          <div className='poll-title'>{pollTitleResult.data}</div>
+          {
+            pollOptions.map((item, index) => {
+              return <div
+                key={'option' + index}
+                className={`poll-option ${item.isSelected ? 'poll-option-selected' : ''}`}
+                onClick={() => selectOption(item)}>
+                {item.name}
+              </div>
+            })
+          }
+          <div className='vote-button-container'>
+            {
+              chain?.id !== bnbChainId &&
+              <button className='deopto-button' onClick={changeNetwork}>Change network</button>
+            }
+            <button className='deopto-button' disabled={chain?.id !== bnbChainId} onClick={sendVoteRequest}>Send vote!</button>
+          </div>
+        </>
+      }
+      {
+        pollTitleResult.isError && pollOptionsResult.isError &&
+        <div className='poll-paragraph'>
+          There was an error while fetching data
+        </div>
+      }
+      {
+        voteTransactionError &&
+        <div className='poll-notification-error'>
+          <div className='poll-notification-header'> ⬛ Error ⬛ </div>
+          <div>{voteTransactionError}</div>
+        </div>
+      }
+      {
+        voteTransactionSuccess &&
+        <div className='poll-notification-success'>
+          <div className='poll-notification-header'> ⬛ Success ⬛ </div>
+          <div>{voteTransactionSuccess}</div>
+        </div>
+      }
+    </div >
   );
 };
