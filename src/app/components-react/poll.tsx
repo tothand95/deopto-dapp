@@ -1,8 +1,10 @@
-import React, { useCallback, useState } from 'react';
-import { ConnectorNotFoundError, useContractRead, useContractWrite, usePrepareContractWrite } from 'wagmi';
+import React from 'react';
+import { useState } from 'react';
+import { ConnectorNotFoundError, useContractRead, useContractWrite, useNetwork, useSwitchNetwork } from 'wagmi';
 import deoptoAbi from 'src/assets/deopto.abi.json'
 import { contractAddressTest } from './constants';
 import { LoadingIndicator } from './loading-indicator';
+import { bsc } from 'wagmi/chains';
 
 interface PollComponentInputs {
   pollIndex: number;
@@ -14,6 +16,10 @@ interface PollOption {
 }
 
 export const Poll = ({ pollIndex }: PollComponentInputs) => {
+  const bnbChainId = bsc.id;
+  const { chain } = useNetwork();
+  const { switchNetwork } = useSwitchNetwork();
+
   const [pollOptions, setPollOptions] = useState([] as PollOption[]);
   const [voteTransactionError, setVoteTransactionError] = useState('');
   const [voteTransactionSuccess, setVoteTransactionSuccess] = useState('');
@@ -68,11 +74,18 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
   });
 
   const sendVoteRequest = () => {
+    if (chain?.id !== bnbChainId) {
+      return;
+    }
     setVoteTransactionError('');
     setVoteTransactionSuccess('');
     if (pollOptions.filter(item => item.isSelected).length === 1) {
       (sendVoteResult as any).write();
     }
+  };
+
+  const changeNetwork = () => {
+    switchNetwork?.(bnbChainId);
   };
 
   return (
@@ -95,7 +108,14 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
             })
           }
           <div className='vote-button-container'>
-            <button className='deopto-button' onClick={sendVoteRequest}>Send vote!</button>
+            {
+              chain?.id === bnbChainId &&
+              <button className='deopto-button' onClick={sendVoteRequest}>Send vote!</button>
+            }
+            {
+              chain?.id !== bnbChainId &&
+              <button className='deopto-button' onClick={changeNetwork}>Change network</button>
+            }
           </div>
         </>
       }

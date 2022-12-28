@@ -1,5 +1,5 @@
 import React from 'react';
-import { bsc, bscTestnet } from 'wagmi/chains';
+import { bsc } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { ThemeOptions } from '@rainbow-me/rainbowkit/dist/themes/baseTheme';
@@ -11,7 +11,7 @@ import { ConnectWallet } from './connect-wallet';
 const appName = 'Deopto';
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [bscTestnet],
+  [bsc],
   [publicProvider()]
 );
 
