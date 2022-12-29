@@ -5,14 +5,15 @@ import { RoadmapComponent } from './components/roadmap/roadmap.component';
 import { VoteComponent } from './components/vote/vote.component';
 import { VotingProcedureComponent } from './components/voting-procedure/voting-procedure.component';
 import { WhitepaperComponent } from './components/whitepaper/whitepaper.component';
+import { DeoptoRoutes } from 'src/app/constants/routes';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', redirectTo: '' },
-  { path: 'vote', component: VoteComponent },
-  { path: 'whitepaper', component: WhitepaperComponent },
-  { path: 'voting-procedure', component: VotingProcedureComponent },
-  { path: 'roadmap', component: RoadmapComponent },
+  { path: '', pathMatch: 'full', redirectTo: DeoptoRoutes.HOME },
+  { path: DeoptoRoutes.HOME, component: HomeComponent },
+  { path: DeoptoRoutes.VOTE, component: VoteComponent },
+  { path: DeoptoRoutes.WHITEPAPER, component: WhitepaperComponent },
+  { path: DeoptoRoutes.VOTING_PROCEDURE, component: VotingProcedureComponent },
+  { path: DeoptoRoutes.ROADMAP, component: RoadmapComponent },
   { path: '**', redirectTo: '' }
 ];
 

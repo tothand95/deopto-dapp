@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { DeoptoRoutes } from './constants/routes';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,16 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'deopto-dapp';
-  onTop = true;
+  title: string = 'deopto-dapp';
+  onTop: boolean = true;
+  isHeaderDummyDisplayed: boolean = false;
 
   constructor(private router: Router, private activeRoute: ActivatedRoute) {
-
+    router.events.subscribe((val) => {
+      if (val instanceof NavigationEnd) {
+        this.isHeaderDummyDisplayed = !val.url.includes(DeoptoRoutes.HOME);
+      }
+    });
   }
 
   @HostListener('window:scroll', ['$event'])
