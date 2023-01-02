@@ -21,7 +21,7 @@ export class AppComponent {
 
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
-        this.isHeaderDummyDisplayed = !val.url.includes(DeoptoRoutes.HOME);
+        this.isHeaderDummyDisplayed = !val.urlAfterRedirects.includes(DeoptoRoutes.HOME);
       }
     });
   }

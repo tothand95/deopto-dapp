@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: DeoptoRoutes.WHITEPAPER, component: WhitepaperComponent },
   { path: DeoptoRoutes.VOTING_PROCEDURE, component: VotingProcedureComponent },
   { path: DeoptoRoutes.ROADMAP, component: RoadmapComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: DeoptoRoutes.HOME }
 ];
 
 @NgModule({
