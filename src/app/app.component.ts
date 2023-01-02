@@ -1,11 +1,13 @@
 import { Component, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { fadeShowAnimation } from './constants/animation';
 import { DeoptoRoutes } from './constants/routes';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [fadeShowAnimation]
 })
 export class AppComponent {
   title: string = 'deopto-dapp';

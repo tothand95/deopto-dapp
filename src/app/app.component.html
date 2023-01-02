@@ -4,15 +4,17 @@
     <span class="logo-text">DEOPTO</span>
   </div>
   <ul>
-    <li class='menu-point' (click)="navigateTo('home')">Home</li>
-    <li class='menu-point' (click)="navigateTo('voting-procedure')">Voting Procedure</li>
-    <li class='menu-point' (click)="navigateTo('whitepaper')">Whitepaper</li>
-    <li class='menu-point'>Team</li>
-    <li class='menu-point' (click)="navigateTo('roadmap')">Roadmap</li>
-    <li class='menu-point menu-vote' (click)="navigateTo('vote')">Let's vote</li>
+    <li class="menu-point" (click)="navigateTo('home')">Home</li>
+    <li class="menu-point" (click)="navigateTo('voting-procedure')">Voting Procedure</li>
+    <li class="menu-point" (click)="navigateTo('whitepaper')">Whitepaper</li>
+    <li class="menu-point">Team</li>
+    <li class="menu-point" (click)="navigateTo('roadmap')">Roadmap</li>
+    <li class="menu-point menu-vote" (click)="navigateTo('vote')">Let's vote</li>
   </ul>
 </header>
 
-<div *ngIf="isHeaderDummyDisplayed" class="header-dummy"></div>
 
-<router-outlet></router-outlet>
+<div [@fadeShowAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
+  <div *ngIf="isHeaderDummyDisplayed" class="header-dummy"></div>
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

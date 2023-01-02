@@ -25,20 +25,14 @@ header {
   -o-transition: 1s;
   transition: 1s;
 
-  background-color: rgba(black, 0.7);
+  background-color: rgba(black, 0.6);
 
   &.sticky {
     padding: 0px 0px;
-    background-color: white;
-  }
-
-  &.sticky .logo-text {
-    color: #000;
+    background-color: rgba(black, 0.9);
   }
 
   &.sticky .menu-point {
-    color: #000;
-
     &:hover {
       color: $primary-color;
     }
@@ -104,10 +98,6 @@ header .menu-point {
     border: 3px solid $primary-color;
     border-radius: 10rem;
     text-shadow: unset;
-  }
-
-  &:hover {
-    color: aqua;
   }
 }
 
