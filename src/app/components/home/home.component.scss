@@ -1,3 +1,5 @@
+@import "src/variables.scss";
+
 .landing-page-banner {
   width: 100%;
   min-height: 50rem;
@@ -7,4 +9,39 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.card-text-wrapper {
+  width: min(27rem, 100%);
+}
+
+.card-image-wrapper {
+  width: min(27rem, 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  width: min(23rem, 55vw);
+}
+
+.card-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Suez One', sans-serif;
+  font-weight: 1000;
+  margin: 1.75rem 0;
+}
+
+.card-desc {
+  text-align: justify;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+.card-desc-highlight {
+  @extend .card-desc;
+  color: $logo-purple;
 }

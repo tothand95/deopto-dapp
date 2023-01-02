@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  reflectionPercent: number = 5;
+  liquidityAcqPercent: number = 2;
+  pollFundingPercent: number = 3;
+
 }

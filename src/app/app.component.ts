@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { fadeShowAnimation } from './constants/animation';
 import { DeoptoRoutes } from './constants/routes';
 
@@ -14,7 +15,10 @@ export class AppComponent {
   onTop: boolean = true;
   isHeaderDummyDisplayed: boolean = false;
 
-  constructor(private router: Router, private activeRoute: ActivatedRoute) {
+  constructor(private router: Router, private activeRoute: ActivatedRoute, private translateService: TranslateService) {
+    translateService.setDefaultLang('en');
+    translateService.use('en');
+
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         this.isHeaderDummyDisplayed = !val.url.includes(DeoptoRoutes.HOME);

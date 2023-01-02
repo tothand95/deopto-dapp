@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url("https://fonts.cdnfonts.com/css/bai-jamjuree");
+@import url("https://fonts.cdnfonts.com/css/secular-one");
+@import url('https://fonts.cdnfonts.com/css/suez-one');
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
-@import "src/app/components-react/rainbowkit-modal.css";
-@import "src/variables.scss";
-@import "src/styles-for-react.scss";
 
-/* You can add shared styles to this file, and reference it from other files */
+@import "app/components-react/rainbowkit-modal.scss";
+@import "variables.scss";
+@import "app/components-react/styles-for-vote-page.scss";
 
 body {
   margin: 0;
@@ -20,18 +21,28 @@ button {
 
 button:disabled {
   cursor: not-allowed;
-  filter: grayscale(1.00);
+  filter: grayscale(1.0);
   opacity: 0.3;
 }
 
-.flex-container {
+.strip-base {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  padding: min(4rem, 5vw) min(5rem, 5vw);
 }
 
-.flex-container-vertical {
-  display: flex;
+.strip-horizontal-content {
+  @extend .strip-base;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.strip-vertical-content {
+  @extend .strip-base;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .deopto-button {

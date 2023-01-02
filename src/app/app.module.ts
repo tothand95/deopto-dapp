@@ -10,6 +10,13 @@ import { HomeComponent } from './components/home/home.component';
 import { VotingProcedureComponent } from './components/voting-procedure/voting-procedure.component';
 import { WhitepaperComponent } from './components/whitepaper/whitepaper.component';
 import { RoadmapComponent } from './components/roadmap/roadmap.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -24,7 +31,12 @@ import { RoadmapComponent } from './components/roadmap/roadmap.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: { provide: TranslateLoader, useFactory: HttpLoaderFactory, deps: [HttpClient] }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
