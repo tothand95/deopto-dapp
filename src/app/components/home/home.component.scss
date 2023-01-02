@@ -13,6 +13,8 @@
 }
 
 .card-text-wrapper {
+  display: flex;
+  flex-direction: column;
   width: min(27rem, 100%);
 }
 
@@ -45,4 +47,47 @@
 .card-desc-highlight {
   @extend .card-desc;
   color: $logo-purple;
+}
+
+.button-learn-more{
+  align-self: flex-end;
+  margin: 2rem 0;
+}
+
+.custom-shape-divider-bottom-1672690925 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  & svg {
+    position: relative;
+    display: block;
+    width: calc(188% + 1.3px);
+    height: $divider-height;
+    transform: rotateY(180deg) translateY(1px);
+  }
+
+  & .shape-fill {
+    fill: $strip-background-light;
+  }
+}
+
+.custom-shape-divider-bottom-1672693190 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  & svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: $divider-height;
+    transform: rotateY(180deg) translateY(1px);
+  }
+
+  & .shape-fill {
+    fill: $strip-background-light;
+  }
 }

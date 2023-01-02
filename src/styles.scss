@@ -25,21 +25,41 @@ button:disabled {
   opacity: 0.3;
 }
 
-.strip-base {
+@mixin strip-base($bottom-divider-height: 0) {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: min(4rem, 5vw) min(5rem, 5vw);
+  padding-top: min(4rem, 5vw);
+  padding-right: min(5rem, 5vw);
+  padding-left: min(4rem, 5vw);
+  padding-bottom: min(5rem + $bottom-divider-height, 5vw + $bottom-divider-height);
+
+  background-image: linear-gradient(to bottom, $strip-background-light 66%, $strip-background-dark)
 }
 
-.strip-horizontal-content {
-  @extend .strip-base;
+.strip-x {
+  @include strip-base;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.strip-vertical-content {
-  @extend .strip-base;
+.strip-x-divided {
+  @include strip-base($divider-height);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.strip-y {
+  @include strip-base;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.strip-y-devided {
+  @include strip-base($divider-height);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -68,7 +88,7 @@ button:disabled {
 
 .deopto-button-sm {
   @include deopto-button-base;
-  
+
   margin: 0.375rem;
   padding: 0.375rem 3rem;
   color: $logo-purple;
