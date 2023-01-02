@@ -5,6 +5,7 @@
       "VotingProcedure": "Voting Procedure",
       "Whitepaper": "Whitepaper",
       "Vote": "Vote",
+      "Roadmap": "Roadmap",
       "Team": "Team"
     },
     "Home": {
@@ -18,10 +19,10 @@
       "TokenomicsSubtitle": "Three actions are happening at each transaction defined by the Smart Contract",
       "TokenomicsReflections": "{{percent}}% Reflections",
       "TokenomicsReflectionsDesc": "{{percent}}% tokens of every transaction are redistributed between holders proportionately",
-      "TokenomicsLiquidity": "{{percent}}% Poll Funding",
-      "TokenomicsLiquidityDesc": "{{percent}}% tokens of every transaction are added to the funding wallet which will be used to help the cause You aimed for",
-      "TokenomicsPollFunding": "{{percent}}% LP Acquisition",
-      "TokenomicsPollFundingDesc": "{{percent}}% tokens of every transaction are added to the liquidity pool helping the growth of the token",
+      "TokenomicsPollFunding": "{{percent}}% Poll Funding",
+      "TokenomicsPollFundingDesc": "{{percent}}% tokens of every transaction are added to the funding wallet which will be used to help the cause You aimed for",
+      "TokenomicsLiquidity": "{{percent}}% LP Acquisition",
+      "TokenomicsLiquidityDesc": "{{percent}}% tokens of every transaction are added to the liquidity pool helping the growth of the token",
       "LaunchTitle": "Launch",
       "LaunchChartText": "Tokens for Sale",
       "LaunchDesc1": "100% of the tokens are available from the start with a Fair Launch",
