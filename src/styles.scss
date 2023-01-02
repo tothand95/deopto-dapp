@@ -45,18 +45,32 @@ button:disabled {
   align-items: center;
 }
 
-.deopto-button {
-  margin: 0.375rem;
-  padding: 0.4rem 4rem;
-  background-color: transparent;
+@mixin deopto-button-base {
   color: $primary-color;
+  background-color: transparent;
   border: 3px solid $primary-color;
   border-radius: 40px;
-
   font-weight: bold;
-  font-size: large;
+  font-size: medium;
 
   &:hover {
     background-color: rgba($color: $primary-color-faded, $alpha: 0.5);
   }
+}
+
+.deopto-button {
+  @include deopto-button-base;
+
+  margin: 0.375rem;
+  padding: 0.4rem 4rem;
+  font-size: large;
+}
+
+.deopto-button-sm {
+  @include deopto-button-base;
+  
+  margin: 0.375rem;
+  padding: 0.375rem 3rem;
+  color: $logo-purple;
+  border-color: $logo-purple;
 }
