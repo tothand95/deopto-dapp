@@ -58,7 +58,7 @@ button:disabled {
   align-items: center;
 }
 
-.strip-y-devided {
+.strip-y-divided {
   @include strip-base($divider-height);
   flex-direction: column;
   justify-content: center;
