@@ -26,10 +26,10 @@ export class AppComponent {
     });
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(_event: Event) {
-    this.onTop = window.scrollY === 0;
-  }
+  // @HostListener('window:scroll', ['$event'])
+  // onScroll(_event: Event) {
+  //   this.onTop = window.scrollY === 0;
+  // }
 
   navigateTo(route: string) {
     this.router.navigate([route], { relativeTo: this.activeRoute.root });
