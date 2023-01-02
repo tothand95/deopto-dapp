@@ -1,36 +1,6 @@
 @import "src/variables.scss";
 
-.landing-page-banner {
-  width: 100%;
-  min-height: 50rem;
-  height: 100vh;
-  background: url('/assets/home-background.svg');
-  background-color: $landing-hero-background;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.card-text-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: min(27rem, 100%);
-}
-
-.card-image-wrapper {
-  width: min(27rem, 100%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-image {
-  width: min(23rem, 55vw);
-}
-
-.card-title {
+.strip-title {
   text-align: center;
   font-size: 2.5em;
   font-family: 'Suez One', sans-serif;
@@ -38,32 +8,12 @@
   margin: 1.75rem 0;
 }
 
-.card-desc {
-  text-align: justify;
+.strip-subtitle {
   font-size: 1.2em;
   line-height: 1.4;
 }
 
-.card-desc-highlight {
-  @extend .card-desc;
-  color: $logo-purple;
-}
-
-.strip-wrap-backwards {
-  flex-wrap: wrap-reverse;
-}
-
-.button-learn-more {
-  align-self: flex-end;
-  margin: 2rem 0;
-}
-
-.tokenomics-subtitle {
-  font-size: 1.2em;
-  line-height: 1.4;
-}
-
-.tokenomics-cards-wrapper {
+.cards-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -71,14 +21,14 @@
   flex-wrap: wrap;
 }
 
-.tokenomics-card {
+.card {
   width: min(27rem, 100%);
   padding: 0rem 3rem;
   display: flex;
   flex-direction: column;
 }
 
-.tokenomics-card-title {
+.card-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,28 +46,41 @@
   height: 12rem;
 }
 
-.title-reflection-bg {
+.card-title-bg-1 {
   background: url('/assets/home/splash-pink.webp');
   background-size: 100% 100%;
 }
 
-.title-poll-funding-bg {
+.card-title-bg-2 {
   background: url('/assets/home/splash-pink-teal.webp');
   background-size: 100% 100%;
 }
 
-.title-liquidity-bg {
+.card-title-bg-3 {
   background: url('/assets/home/splash-teal.webp');
   background-size: 100% 100%;
 }
 
-.tokenomics-card-desc {
+.card-desc {
   text-align: center;
   font-size: 1.2em;
   line-height: 1.4;
 }
 
-// ----------------------
-// Divider styles
-// ----------------------
+.custom-shape-divider-bottom-1672693442 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
+  & svg {
+    position: relative;
+    display: block;
+    width: calc(190% + 1.3px);
+    height: $divider-height;
+  }
+
+  & .shape-fill {
+    fill: $strip-background-light;
+  }
+}

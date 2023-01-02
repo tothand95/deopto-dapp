@@ -13,6 +13,10 @@ import { RoadmapComponent } from './components/roadmap/roadmap.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { LandingStripPowerComponent } from './shared/components/landing-strip-power/landing-strip-power.component';
+import { LandingStripInnovationComponent } from './shared/components/landing-strip-innovation/landing-strip-innovation.component';
+import { LandingStripLaunchComponent } from './shared/components/landing-strip-launch/landing-strip-launch.component';
+import { LandingStripTokenomicsComponent } from './shared/components/landing-strip-tokenomics/landing-strip-tokenomics.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -36,7 +40,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: { provide: TranslateLoader, useFactory: HttpLoaderFactory, deps: [HttpClient] }
-    })
+    }),
+    LandingStripPowerComponent,
+    LandingStripInnovationComponent,
+    LandingStripTokenomicsComponent,
+    LandingStripLaunchComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
