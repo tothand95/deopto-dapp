@@ -30,9 +30,9 @@
       "LaunchDesc3": "10 millió Deopto token elérhető",
       "LaunchDesc4": "Likviditás (LP tokenek) zárolva 2099-ig",
       "TeamTitle": "Csapatunk",
-      "TeamCoowner": "Társtulajdonos",
-      "TeamProductManager": "Termékmenedzser",
-      "TeamSoftwareEngineer": "Szoftverfejlesztő mérnök"
+      "RoleCoowner": "Társtulajdonos",
+      "RoleProductManager": "Termékmenedzser",
+      "RoleSoftwareEngineer": "Szoftverfejlesztő mérnök"
     }
   }
 }

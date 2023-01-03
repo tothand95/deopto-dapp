@@ -30,9 +30,9 @@
       "LaunchDesc3": "10 million Deopto tokens launched",
       "LaunchDesc4": "Liquidity Pools (LP tokens) are locked until 01.01.2099",
       "TeamTitle": "Our team",
-      "TeamCoowner": "Co-Owner",
-      "TeamProductManager": "Product Manager",
-      "TeamSoftwareEngineer": "Software engineer"
+      "RoleCoowner": "Co-Owner",
+      "RoleProductManager": "Product Manager",
+      "RoleSoftwareEngineer": "Software engineer"
     }
   }
 }
