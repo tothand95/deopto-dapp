@@ -1,0 +1,67 @@
+@import "src/variables.scss";
+
+.card-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: min(27rem, 100%);
+}
+
+.card-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Suez One', sans-serif;
+  font-weight: 1000;
+  margin: 1.75rem 0;
+}
+
+.card-desc {
+  text-align: justify;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+.card-desc-highlight {
+  @extend .card-desc;
+  color: $logo-purple;
+}
+
+.card-image-wrapper {
+  width: min(27rem, 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  width: min(23rem, 55vw);
+}
+
+.strip-wrap-backwards {
+  flex-wrap: wrap-reverse;
+}
+
+.button-learn-more {
+  align-self: flex-end;
+  margin: 2rem 0;
+}
+
+.custom-shape-divider-bottom-1672693190 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+
+  & svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: $divider-height;
+    transform: rotateY(180deg) translateY(1px);
+  }
+
+  & .shape-fill {
+    fill: $strip-background-light;
+  }
+}

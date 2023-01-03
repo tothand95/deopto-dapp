@@ -1,0 +1,13 @@
+@import "src/variables.scss";
+
+.landing-page-banner {
+  width: 100%;
+  height: max(100vh, 62rem);
+  background: url('/assets/global/home-background.svg');
+  background-color: $landing-hero-background;
+  background-position-x: center;
+  background-position-y: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

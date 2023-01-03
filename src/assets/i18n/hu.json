@@ -1,0 +1,38 @@
+{
+  "DEO": {
+    "Navigation": {
+      "Home": "Kezdőlap",
+      "VotingProcedure": "Szavazási eljárás",
+      "Whitepaper": "Whitepaper",
+      "Vote": "Vote",
+      "Roadmap": "Ütemterv",
+      "Team": "Team"
+    },
+    "Home": {
+      "PowerTitle": "A tokenben rejlő erő",
+      "PowerDesc": "Célunk, hogy olyan ügyet segítsünk, amit a közösség méltónak talál. Rendszeresen részt vehetsz egy szavazáson, amely meghatározza, hogy a tranzakciókból befolyt összeget mire legyen felhasználva.",
+      "InnovationTitle": "Innovatív szavazás",
+      "InnovationDesc1": "Innovatív blokklánc technológia, ahogy még soha nem láttad.",
+      "InnovationDesc2": "Minden eljárás a token Smart Contract-ján belül történik az átláthatóság és a biztonság érdekében. Ez a megvalósítás segít abban, hogy legyőzzük a szavazással kapcsolatos manipulációkat, hogy minden lehetőségnek és a résztvevőknek tisztességes és egyenlő játékteret biztosítsunk.",
+      "InnovationLearnMore": "Tudj meg többet a szavazásról",
+      "TokenomicsTitle": "Hogyan működik a token",
+      "TokenomicsSubtitle": "Minden egyes tranzakciónál a Smart Contract által meghatározott alábbi három művelet történik",
+      "TokenomicsReflections": "{{percent}}% Reflection",
+      "TokenomicsReflectionsDesc": "Minden tranzakció {{percent}}%-a arányosan újraosztásra kerül a tulajdonosok között",
+      "TokenomicsPollFunding": "{{percent}}% Szavazás finanszírozása",
+      "TokenomicsPollFundingDesc": "Minden tranzakció {{percent}}%-a hozzáadódik a finanszírozási pénztárcához, amely a megszavazott cél érdekében lesz felhasználva",
+      "TokenomicsLiquidity": "{{percent}}% LP növelés",
+      "TokenomicsLiquidityDesc": "Minden tranzakció {{percent}}%-a hozzáadódik a likviditási poolhoz, ezzel segítve a token növekedését",
+      "LaunchTitle": "Piacra lépés",
+      "LaunchChartText": "Piacra kínált tokenek száma",
+      "LaunchDesc1": "A tokenek 100%-a elérhető a kezdetektől, Fair Launch",
+      "LaunchDesc2": "Proof of Stake token a Binance Smart Chain hálozatán",
+      "LaunchDesc3": "10 millió Deopto token elérhető",
+      "LaunchDesc4": "Likviditás (LP tokenek) zárolva 2099-ig",
+      "TeamTitle": "Csapatunk",
+      "TeamCoowner": "Társtulajdonos",
+      "TeamProductManager": "Termékmenedzser",
+      "TeamSoftwareEngineer": "Szoftverfejlesztő mérnök"
+    }
+  }
+}

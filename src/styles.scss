@@ -1,12 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url("https://fonts.cdnfonts.com/css/bai-jamjuree");
+@import url("https://fonts.cdnfonts.com/css/secular-one");
+@import url('https://fonts.cdnfonts.com/css/suez-one');
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
-@import "src/app/components-react/rainbowkit-modal.css";
-@import "src/variables.scss";
-@import "src/styles-for-react.scss";
 
-/* You can add shared styles to this file, and reference it from other files */
+@import "app/components-react/rainbowkit-modal.scss";
+@import "variables.scss";
+@import "app/components-react/styles-for-vote-page.scss";
+
+body {
+  margin: 0;
+  min-height: 150vh;
+  font-family: 'Bai Jamjuree';
+}
 
 button {
   cursor: pointer;
@@ -14,32 +21,76 @@ button {
 
 button:disabled {
   cursor: not-allowed;
-  filter: grayscale(1.00);
+  filter: grayscale(1.0);
   opacity: 0.3;
 }
 
-.flex-container {
+@mixin strip-base($bottom-divider-height: 0) {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
+  padding-top: min(4rem, 5vw);
+  padding-right: min(5rem, 5vw);
+  padding-left: min(4rem, 5vw);
+  padding-bottom: min(5rem + $bottom-divider-height, 5vw + $bottom-divider-height);
+
+  background-image: linear-gradient(to bottom, $strip-background-light 66%, $strip-background-dark)
+}
+
+.strip-x {
+  @include strip-base;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.flex-container-vertical {
-  display: flex;
+.strip-x-divided {
+  @include strip-base($divider-height);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.strip-y {
+  @include strip-base;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.deopto-button {
-  margin: 0.375rem;
-  padding: 0.4rem 4rem;
-  background-color: transparent;
+.strip-y-divided {
+  @include strip-base($divider-height);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin deopto-button-base {
   color: $primary-color;
+  background-color: transparent;
   border: 3px solid $primary-color;
   border-radius: 40px;
-
   font-weight: bold;
-  font-size: large;
+  font-size: medium;
 
   &:hover {
     background-color: rgba($color: $primary-color-faded, $alpha: 0.5);
   }
+}
+
+.deopto-button {
+  @include deopto-button-base;
+
+  margin: 0.375rem;
+  padding: 0.4rem 4rem;
+  font-size: large;
+}
+
+.deopto-button-sm {
+  @include deopto-button-base;
+
+  margin: 0.375rem;
+  padding: 0.375rem 3rem;
+  color: $logo-purple;
+  border-color: $logo-purple;
 }

@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "@rainbow-me/rainbowkit": "0.8.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
