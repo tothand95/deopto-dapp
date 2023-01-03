@@ -9,6 +9,7 @@
 }
 
 .strip-subtitle {
+  text-align: center;
   font-size: 1.2em;
   line-height: 1.4;
 }
@@ -19,11 +20,11 @@
   justify-content: space-evenly;
   align-self: stretch;
   flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .card {
   width: min(27rem, 100%);
-  padding: 0rem 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -33,17 +34,18 @@
   align-items: center;
   justify-content: center;
 
+  height: 12rem;
   margin-top: 1rem;
+
+  text-align: center;
   font-size: 2.2em;
   font-family: 'Suez One', sans-serif;
   font-weight: 1000;
   text-shadow:
-    $strip-background-light 3px 3px 7px,
-    $strip-background-light 3px -3px 7px,
-    $strip-background-light -3px 3px 7px,
-    $strip-background-light -3px -3px 7px;
-
-  height: 12rem;
+    $strip-background-light 3px 3px 5px,
+    $strip-background-light 3px -3px 5px,
+    $strip-background-light -3px 3px 5px,
+    $strip-background-light -3px -3px 5px;
 }
 
 .card-title-bg-1 {
@@ -72,11 +74,12 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  overflow: hidden;
 
   & svg {
     position: relative;
     display: block;
-    width: calc(190% + 1.3px);
+    width: 190%;
     height: $divider-height;
   }
 

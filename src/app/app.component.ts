@@ -14,6 +14,7 @@ export class AppComponent {
   title: string = 'deopto-dapp';
   onTop: boolean = true;
   isHeaderDummyDisplayed: boolean = false;
+  isMenuOpen: boolean = false;
 
   constructor(private router: Router, private activeRoute: ActivatedRoute, private translateService: TranslateService) {
     translateService.setDefaultLang('en');
@@ -33,5 +34,9 @@ export class AppComponent {
 
   navigateTo(route: string) {
     this.router.navigate([route], { relativeTo: this.activeRoute.root });
+  }
+
+  onMenuClick() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
