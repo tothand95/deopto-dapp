@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { fadeShowAnimation } from './constants/animation';
@@ -18,7 +18,7 @@ export class AppComponent {
 
   constructor(private router: Router, private activeRoute: ActivatedRoute, private translateService: TranslateService) {
     translateService.setDefaultLang('en');
-    translateService.use('en');
+    translateService.use('hu');
 
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {

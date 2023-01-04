@@ -1,0 +1,78 @@
+@import "src/variables.scss";
+
+.strip-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Suez One', sans-serif;
+  font-weight: 1000;
+  margin: 1.75rem 0;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card-chart {
+  position: relative;
+
+  & div {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    text-align: right;
+    font-size: 1rem;
+
+    position: absolute;
+    right: 0;
+    bottom: 195px;
+  }
+
+  & img {
+    height: 15rem;
+  }
+}
+
+.card-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+.card-desc-point::before {
+  content: '';
+  display: inline-block;
+  width: 0.35em;
+  height: 0.35em;
+  margin-bottom: 0.15em;
+  margin-right: 0.3em;
+  background-color: black;
+  border-radius: 2rem;
+}
+
+.custom-shape-divider-bottom-1672781191 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  transform: rotate(180deg);
+
+  & svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: $divider-height;
+    transform: rotateY(180deg);
+  }
+
+  & .shape-fill {
+    fill: $strip-background-light;
+  }
+}

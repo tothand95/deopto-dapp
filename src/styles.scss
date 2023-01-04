@@ -11,7 +11,6 @@
 
 body {
   margin: 0;
-  min-height: 150vh;
   font-family: 'Bai Jamjuree';
 }
 
@@ -33,7 +32,10 @@ button:disabled {
   padding-right: min(5rem, 5vw);
   padding-left: min(4rem, 5vw);
   padding-bottom: min(5rem + $bottom-divider-height, 5vw + $bottom-divider-height);
+  background-color: $strip-background-light;
+}
 
+@mixin strip-divided{
   background-image: linear-gradient(to bottom, $strip-background-light 66%, $strip-background-dark)
 }
 
@@ -46,6 +48,7 @@ button:disabled {
 
 .strip-x-divided {
   @include strip-base($divider-height);
+  @include strip-divided();
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
@@ -60,6 +63,7 @@ button:disabled {
 
 .strip-y-divided {
   @include strip-base($divider-height);
+  @include strip-divided();
   flex-direction: column;
   justify-content: center;
   align-items: center;

@@ -1,12 +1,14 @@
 {
   "DEO": {
-    "Navigation": {
+    "Global": {
       "Home": "Home",
       "VotingProcedure": "Voting Procedure",
       "Whitepaper": "Whitepaper",
-      "Vote": "Vote",
+      "Vote": "Let's vote",
       "Roadmap": "Roadmap",
-      "Team": "Team"
+      "Team": "Team",
+      "Contact": "Contact: ",
+      "Copyright": "© 2022 by Deopto Team. Proudly created with love"
     },
     "Home": {
       "PowerTitle": "The Power in your tokens",
@@ -30,9 +32,9 @@
       "LaunchDesc3": "10 million Deopto tokens launched",
       "LaunchDesc4": "Liquidity Pools (LP tokens) are locked until 01.01.2099",
       "TeamTitle": "Our team",
-      "TeamCoowner": "Co-Owner",
-      "TeamProductManager": "Product Manager",
-      "TeamSoftwareEngineer": "Software engineer"
+      "RoleCoowner": "Co-Owner",
+      "RoleProductManager": "Product Manager",
+      "RoleSoftwareEngineer": "Software engineer"
     }
   }
 }
