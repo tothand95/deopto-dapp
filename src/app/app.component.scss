@@ -55,7 +55,6 @@ header {
   & .logo-image {
     height: 4rem;
     width: 4rem;
-    filter: drop-shadow(1px 1px 3px rgb(black, 0.7));
   }
 
   & .logo-text {
@@ -193,9 +192,75 @@ footer {
   bottom: 0;
   width: 100%;
   height: $footer-height;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+
   background-image: url("/assets/global/footer.webp");
   background-color: $strip-background-light;
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: max(115rem, 100vw) 100%;
+
+  & > * {
+    padding-left: min(5rem, 5vw);
+    padding-right: min(5rem, 5vw);
+  }
+
+  & .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    & .logo-image {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    & .logo-text {
+      margin: 1rem;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+  }
+
+  & .social-links {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+
+    & img{
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+
+  & .contact {
+    font-weight: 1000;
+    margin-bottom: 1rem;
+  }
+
+  & .copyright {
+    font-weight: 1000;
+    margin-bottom: 2rem;
+  }
 }

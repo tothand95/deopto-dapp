@@ -1,12 +1,14 @@
 {
   "DEO": {
-    "Navigation": {
+    "Global": {
       "Home": "Home",
       "VotingProcedure": "Voting Procedure",
       "Whitepaper": "Whitepaper",
       "Vote": "Let's vote",
       "Roadmap": "Roadmap",
-      "Team": "Team"
+      "Team": "Team",
+      "Contact": "Contact: ",
+      "Copyright": "© 2022 by Deopto Team. Proudly created with love"
     },
     "Home": {
       "PowerTitle": "The Power in your tokens",

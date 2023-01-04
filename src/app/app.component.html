@@ -4,12 +4,12 @@
     <span class="logo-text">DEOPTO</span>
   </div>
   <div class="menu-point-container">
-    <div class="menu-point" (click)="navigateTo('home')">{{ 'DEO.Navigation.Home' | translate}}</div>
-    <div class="menu-point" (click)="navigateTo('voting-procedure')">{{ 'DEO.Navigation.VotingProcedure' | translate}}</div>
-    <div class="menu-point" (click)="navigateTo('whitepaper')">{{ 'DEO.Navigation.Whitepaper' | translate}}</div>
-    <div class="menu-point">{{ 'DEO.Navigation.Team' | translate}}</div>
-    <div class="menu-point" (click)="navigateTo('roadmap')">{{ 'DEO.Navigation.Roadmap' | translate}}</div>
-    <div class="menu-point vote-button" (click)="navigateTo('vote')">{{ 'DEO.Navigation.Vote' | translate}}</div>
+    <div class="menu-point" (click)="navigateTo('home')">{{ 'DEO.Global.Home' | translate}}</div>
+    <div class="menu-point" (click)="navigateTo('voting-procedure')">{{ 'DEO.Global.VotingProcedure' | translate}}</div>
+    <div class="menu-point" (click)="navigateTo('whitepaper')">{{ 'DEO.Global.Whitepaper' | translate}}</div>
+    <div class="menu-point">{{ 'DEO.Global.Team' | translate}}</div>
+    <div class="menu-point" (click)="navigateTo('roadmap')">{{ 'DEO.Global.Roadmap' | translate}}</div>
+    <div class="menu-point vote-button" (click)="navigateTo('vote')">{{ 'DEO.Global.Vote' | translate}}</div>
   </div>
   <div class="hamburger-menu-button" (click)="onMenuClick()">
     <div class="menu-icon-1" [ngClass]="{ 'menu-open': isMenuOpen }"></div>
@@ -22,5 +22,29 @@
   <div *ngIf="isHeaderDummyDisplayed" class="header-dummy"></div>
   <router-outlet #outlet="outlet"></router-outlet>
 
-  <footer> </footer>
+  <footer>
+    <div class="logo-container">
+      <img class="logo-image" src="assets/global/deopto-logo.svg" alt="DEOPTO">
+      <span class="logo-text">DEOPTO</span>
+    </div>
+    <div class="social-links">
+      <a href="https://t.me/deopto" target="blank">
+        <img src="assets/global/telegram-logo.png" alt="Telegram">
+      </a>
+      <a href="https://twitter.com/deopto" target="blank">
+        <img src="assets/global/twitter-logo.png" alt="Twitter">
+      </a>
+      <a href="https://discord.gg/ttm9TKEQPP" target="blank">
+        <img src="assets/global/discord-logo.png" alt="Discord">
+      </a>
+      <a href="https://www.facebook.com/deopto.token" target="blank">
+        <img src="assets/global/facebook-logo.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/deopto_token/" target="blank">
+        <img src="assets/global/instagram-logo.png" alt="Instagram">
+      </a>
+    </div>
+    <div class="contact">{{ 'DEO.Global.Contact' | translate}}deopto.token@gmail.com</div>
+    <div class="copyright">{{ 'DEO.Global.Copyright' | translate}}</div>
+  </footer>
 </div>

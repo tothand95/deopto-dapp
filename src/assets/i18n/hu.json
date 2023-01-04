@@ -1,12 +1,14 @@
 {
   "DEO": {
-    "Navigation": {
+    "Global": {
       "Home": "Kezdőlap",
       "VotingProcedure": "Szavazási eljárás",
       "Whitepaper": "Whitepaper",
       "Vote": "Szavazz!",
       "Roadmap": "Ütemterv",
-      "Team": "Csapatunk"
+      "Team": "Csapatunk",
+      "Contact": "Elérhetőség: ",
+      "Copyright": "© 2022 Deopto csapata által büszkén, szeretettel alkotva"
     },
     "Home": {
       "PowerTitle": "A tokenben rejlő erő",
