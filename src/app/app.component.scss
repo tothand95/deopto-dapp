@@ -5,7 +5,15 @@
 @import "src/variables.scss";
 
 $header-height: 5rem;
-$header-padding: 1.0rem;
+$header-padding: 1rem;
+$footer-height: 25rem;
+
+div.main-container {
+  position: relative;
+  min-height: max(40rem, calc(100vh - $footer-height));
+  padding-bottom: $footer-height;
+  background-color: $strip-background-light;
+}
 
 // --------------------
 // Header styles
@@ -130,7 +138,7 @@ $menu-button-size: 1.5rem;
 .menu-icon-1,
 .menu-icon-2,
 .menu-icon-3 {
-  content: '';
+  content: "";
   display: block;
   background-color: #fff;
   height: 0.25rem;
@@ -181,9 +189,11 @@ $menu-button-size: 1.5rem;
 // --------------------
 
 footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 25rem;
-  background-image: url('/assets/global/footer.webp');
+  height: $footer-height;
+  background-image: url("/assets/global/footer.webp");
   background-color: $strip-background-light;
   background-position-x: center;
   background-repeat: no-repeat;
