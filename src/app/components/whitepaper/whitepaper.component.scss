@@ -1,0 +1,115 @@
+@import "src/variables.scss";
+
+.card-text-wrapper {
+  display: block;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: min(55rem, 100%);
+  gap: 1.5rem;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Suez One', sans-serif;
+  font-weight: 1000;
+  margin: 1.75rem 0;
+}
+
+.card-desc {   
+  text-align: justify;
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin: 1.5rem 0;
+}
+
+.bulletpoint::before {
+  content: '';
+  display: inline-block;
+  width: 0.35em;
+  height: 0.35em;
+  margin-bottom: 0.15em;
+  margin-right: 0.3em;
+  background-color: black;
+  border-radius: 2rem;
+}
+
+.card-desc.bulletpoint {
+  margin-left: 2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.card-desc-highlight {
+  text-align: center;
+  margin: 1.75rem 0;
+  font-weight: 1000;
+  @extend .card-desc;
+  color: $logo-purple;
+}
+
+.button-download-whitepaper {
+  align-self: flex-end;
+  margin-left: 30rem;
+}
+
+.custom-shape-divider-bottom-1672693190 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+
+  & svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: $divider-height;
+    transform: rotateY(180deg) translateY(1px);
+  }
+
+  & .shape-fill {
+    fill: $strip-background-light;
+  }
+}
+
+
+.custom-shape-divider-bottom-1672690925 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+  
+    & svg {
+      position: relative;
+      display: block;
+      width: 188%;
+      height: $divider-height;
+      transform: rotateY(180deg) translateY(1px);
+    }
+  
+    & .shape-fill {
+      fill: $strip-background-light;
+    }
+  }
+
+
+  .custom-shape-divider-bottom-1672693442 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+  
+    & svg {
+      position: relative;
+      display: block;
+      width: 190%;
+      height: $divider-height;
+    }
+  
+    & .shape-fill {
+      fill: $strip-background-light;
+    }
+  }
