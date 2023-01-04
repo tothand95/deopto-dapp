@@ -52,6 +52,7 @@ button:disabled {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  padding-bottom: min(2rem + $divider-height, 5vw + $divider-height);
 }
 
 .strip-y {
@@ -67,6 +68,7 @@ button:disabled {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: min(2rem + $divider-height, 5vw + $divider-height);
 }
 
 @mixin deopto-button-base {
