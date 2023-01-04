@@ -59,8 +59,8 @@
       "LpAcquisitionText2": "From every transaction the Smart Contract takes a specific percentage of tokens and when the amount gathered reaches a certain amount it will be automatically converted and added to the liquidity pool. The method is fully automated within the Smart Contract to ensure security and transparency. This way nobody will suffer from impermanent loss because there is no need for anyone to provide liquidity.",
       "LpAcquisitionText3": "Larger liquidity pools decrease the volatility of the impact of swaps against the overall available supply. As time progresses the liquidity acquisition ensures an ever growing stability to handle higher demand as the market progresses.",
       "LpAcquisitionText4": "Liquidity Pool (LP tokens) are locked for 77 years (until 01.01.2099):",
-      "LpAcquisitionTokenLock1": "WBNB/DEO LP token lock - certificate:",
-      "LpAcquisitionTokenLock2": "BUSD/DEO LP token lock - certificate:",
+      "LpAcquisitionTokenLock1": "WBNB/DEO LP token lock certificate: ",
+      "LpAcquisitionTokenLock2": "BUSD/DEO LP token lock certificate: ",
       "DownloadWhitepaper": "Download Whitepaper as PDF"
     },
     "VotingProcedure": {
