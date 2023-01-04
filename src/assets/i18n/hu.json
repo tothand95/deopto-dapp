@@ -35,6 +35,32 @@
       "RoleCoowner": "Társtulajdonos",
       "RoleProductManager": "Termékmenedzser",
       "RoleSoftwareEngineer": "Szoftverfejlesztő mérnök"
+    },
+    "Whitepaper": {
+      "MainTitle": "Deopto",
+      "MainSubtitle": "A Reflection token with Automated Liquidity Acquisition and Community Defined Purposes",
+      "MainDesc": "Deopto aims to be an ever growing community token which aims to solve problems of the present. We are aiming to help relevant issues what the community finds worthy to stand behind.",
+      "VotingTitle": "Helping a Relevant Cause - Voting",
+      "VotingText1": "Deopto wants to be relevant with the issues our world is facing. We give opportunities for causes to compete in a regular voting procedure where holders of the tokens can participate and shape the purpose and history of the token. The voting is entirely handled by the Smart Contract to take advantage of the immutable nature and security of the Smart Contract. We believe that innovation is necessary in every field to progress our world, that is why we came up with a never seen before implementation of the decentralized blockchain.",
+      "VotingText2": "Voting happens through communication with the Smart Contract so there is a small amount of gas fee to be paid with every vote. Voting can be done from our site with a friendly user interface and every previous poll will be transparently displayed in the archives.",
+      "VotingText3": "You decide, vote!",
+      "ReflectionTitle": "Reflection Tokens",
+      "ReflectionText1": "No need for costly mining machines and liquidity funding from the community. Reflection mechanics ensures that you only need to hold your tokens to earn more. With reflections implemented a specific percentage of tokens from each transaction will be redistributed amongst the holders proportionately to reward everyone who committed to have Deopto tokens.",
+      "ReflectionText2": "Benefits having reflections implemented:",
+      "ReflectionBenefits1": "Rewarding people holding tokens",
+      "ReflectionBenefits2": "Security and transparency: everything is controlled by the Smart Contract",
+      "ReflectionBenefits3": "No transactions and transaction fees to claim rewards. You get rewards real time from every transaction",
+      "ReflectionBenefits4": "Fair distribution: the reward amount is dependent on how many tokens you are holding compared to others",
+      "ReflectionBenefits5": "No costs: reflections are happening real time without additional transaction fees",
+      "ReflectionTextBottomNote": "Wallets (e.g. the developer wallet) can be excluded from this mechanism with the _excludeFromReward method of the Smart Contract to further enhance the rewards for individual holders.",
+      "AcquisitionTitle": "Automated Liquidity Acquisition",
+      "LpAcquisitionText1": "Liquidity is a crucial point for every token. We implemented features for this token to reward holders so we can eliminate the need for providing liquidity to grow. As a solution the Smart Contract takes care providing liquidity periodically to ensure a constant growth.",
+      "LpAcquisitionText2": "From every transaction the Smart Contract takes a specific percentage of tokens and when the amount gathered reaches a certain amount it will be automatically converted and added to the liquidity pool. The method is fully automated within the Smart Contract to ensure security and transparency. This way nobody will suffer from impermanent loss because there is no need for anyone to provide liquidity.",
+      "LpAcquisitionText3": "Larger liquidity pools decrease the volatility of the impact of swaps against the overall available supply. As time progresses the liquidity acquisition ensures an ever growing stability to handle higher demand as the market progresses.",
+      "LpAcquisitionText4": "Liquidity Pool (LP tokens) are locked for 77 years (until 01.01.2099):",
+      "LpAcquisitionTokenLock1": "WBNB/DEO LP token lock - certificate:",
+      "LpAcquisitionTokenLock2": "BUSD/DEO LP token lock - certificate:",
+      "DownloadWhitepaper": "Download Whitepaper as PDF"
     }
   }
 }
