@@ -1,12 +1,14 @@
 {
   "DEO": {
-    "Navigation": {
+    "Global": {
       "Home": "Kezdőlap",
       "VotingProcedure": "Szavazási eljárás",
       "Whitepaper": "Whitepaper",
-      "Vote": "Vote",
+      "Vote": "Szavazz!",
       "Roadmap": "Ütemterv",
-      "Team": "Team"
+      "Team": "Csapatunk",
+      "Contact": "Elérhetőség: ",
+      "Copyright": "© 2022 Deopto csapata által büszkén, szeretettel alkotva"
     },
     "Home": {
       "PowerTitle": "A tokenben rejlő erő",
@@ -24,15 +26,15 @@
       "TokenomicsLiquidity": "{{percent}}% LP növelés",
       "TokenomicsLiquidityDesc": "Minden tranzakció {{percent}}%-a hozzáadódik a likviditási poolhoz, ezzel segítve a token növekedését",
       "LaunchTitle": "Piacra lépés",
-      "LaunchChartText": "Piacra kínált tokenek száma",
+      "LaunchChartText": "Piacra kínált tokenek",
       "LaunchDesc1": "A tokenek 100%-a elérhető a kezdetektől, Fair Launch",
       "LaunchDesc2": "Proof of Stake token a Binance Smart Chain hálozatán",
       "LaunchDesc3": "10 millió Deopto token elérhető",
       "LaunchDesc4": "Likviditás (LP tokenek) zárolva 2099-ig",
       "TeamTitle": "Csapatunk",
-      "TeamCoowner": "Társtulajdonos",
-      "TeamProductManager": "Termékmenedzser",
-      "TeamSoftwareEngineer": "Szoftverfejlesztő mérnök"
+      "RoleCoowner": "Társtulajdonos",
+      "RoleProductManager": "Termékmenedzser",
+      "RoleSoftwareEngineer": "Szoftverfejlesztő mérnök"
     }
   }
 }

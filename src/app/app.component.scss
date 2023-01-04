@@ -5,7 +5,19 @@
 @import "src/variables.scss";
 
 $header-height: 5rem;
-$header-padding: 1.0rem;
+$header-padding: 1rem;
+$footer-height: 25rem;
+
+div.main-container {
+  position: relative;
+  min-height: max(40rem, calc(100vh - $footer-height));
+  padding-bottom: $footer-height;
+  background-color: $strip-background-light;
+}
+
+// --------------------
+// Header styles
+// --------------------
 
 header {
   position: fixed;
@@ -15,7 +27,7 @@ header {
   height: $header-height;
   padding: $header-padding 0rem;
   z-index: 999;
-  background-color: rgba(black, 0.6);
+  background-color: rgba(black, 0.9);
 
   display: flex;
   justify-content: space-evenly;
@@ -43,7 +55,6 @@ header {
   & .logo-image {
     height: 4rem;
     width: 4rem;
-    filter: drop-shadow(1px 1px 3px rgb(black, 0.7));
   }
 
   & .logo-text {
@@ -126,7 +137,7 @@ $menu-button-size: 1.5rem;
 .menu-icon-1,
 .menu-icon-2,
 .menu-icon-3 {
-  content: '';
+  content: "";
   display: block;
   background-color: #fff;
   height: 0.25rem;
@@ -169,5 +180,87 @@ $menu-button-size: 1.5rem;
     top: 0;
     bottom: 0;
     margin: auto 0;
+  }
+}
+
+// --------------------
+// Footer styles
+// --------------------
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+
+  background-image: url("/assets/global/footer.webp");
+  background-color: $strip-background-light;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: max(115rem, 100vw) 100%;
+
+  & > * {
+    padding-left: min(5rem, 5vw);
+    padding-right: min(5rem, 5vw);
+  }
+
+  & .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    & .logo-image {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    & .logo-text {
+      margin: 1rem;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+  }
+
+  & .social-links {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+
+    & img{
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  & .contact {
+    font-weight: 1000;
+    margin-bottom: 1rem;
+  }
+
+  & .copyright {
+    font-weight: 1000;
+    margin-bottom: 2rem;
   }
 }
