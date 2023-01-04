@@ -35,6 +35,32 @@
       "RoleCoowner": "Társtulajdonos",
       "RoleProductManager": "Termékmenedzser",
       "RoleSoftwareEngineer": "Szoftverfejlesztő mérnök"
+    },
+    "Whitepaper": {
+      "MainTitle": "Deopto",
+      "MainSubtitle": "Reflection token automatizált likviditásnöveléssel és közösség által meghatározott célokkal",
+      "MainDesc": "A Deopto célja, hogy egy folyamatosan növekvő közösségi token legyen, amely a jelen problémáit segítse. Célunk, hogy olyan releváns kérdésekben segítsünk, amelyeket a közösség érdemesnek talál.",
+      "VotingTitle": "Méltó ügyek támogatása - A szavazás",
+      "VotingText1": "A Deopto szeretne releváns lenni a világunkat érintő problémákkal kapcsolatban. Lehetőséget adunk az ügyek megmérettetésére egy rendszeres szavazási eljárásban, ahol a tokenek birtokosai részt vehetnek és alakíthatják a token célját és történetét. A szavazást teljes egészében a Smart Contract kezeli, hogy kihasználjuk a Smart Contract által nyújtott biztonságot. Hiszünk abban, hogy az innováció minden területen szükséges a világ fejlődéséhez, ezért hoztunk létre egy eddig még nem látott implementációt a blokklánc segítségével.",
+      "VotingText2": "A szavazáshoz kommunikálni kell az Smart Contracttal, így minden szavazatnál egy minimális tranzakciós díjat kell fizetni. Szavazni oldalunkról, egy könnyen kezelhető felhasználói felület segítségével lehet, és minden korábbi szavazás transzparensen megtekinthető az archívumban.",
+      "VotingText3": "Te döntesz, szavazz!",
+      "ReflectionTitle": "Reflection funkció",
+      "ReflectionText1": "Nincs szükség drága bányászgépekre és közösségi likviditási finanszírozásra. A Reflection biztosítja, hogy csupán tokennel kell rendelkezni ahhoz, hogy többet keress. A Reflection segítségével minden tranzakcióból bizonyos mennyiségű token újraosztásra kerül a tulajdonosok között részarányosan, hogy mindenkit megjutalmazzon, aki elkötelezte magát a Deopto tokenek birtoklása mellett.",
+      "ReflectionText2": "A Reflection implementálásának előnyei:",
+      "ReflectionBenefits1": "A tokenekkel rendelkezők jutalmazása",
+      "ReflectionBenefits2": "Biztonság és átláthatóság: minden a Smart Contracton belül történik",
+      "ReflectionBenefits3": "Jutalmak igényléséhez nincs szükség tranzakciókra és tranzakciós díjakra. Valós idejű jutalmazás minden tranzakciónál",
+      "ReflectionBenefits4": "Tisztességes elosztás: a jutalom összege részarányosan oszlik el a részesedéssel rendelkezők között",
+      "ReflectionBenefits5": "Költség nélküli: a Reflection valós időben, további tranzakciós díjak nélkül történik",
+      "ReflectionTextBottomNote": "A pénztárcák (mint pl. a fejlesztői pénztárca) kizárhatóak ebből a mechanizmusból az _excludeFromReward metódussal a Smart Contract keretein belül, hogy tovább növeljék az egyes tulajdonosok jutalmait.",
+      "AcquisitionTitle": "Likviditás automatizált növelése",
+      "LpAcquisitionText1": "A likviditás minden tokennél döntő fontosságú. A Deopto tokenhez olyan funkciókat implementáltunk, hogy a részesedéssel rendelkező birtokosokat jutalmazzuk, így meg kellett oldani a likviditás biztosítását a növekedéshez. Megoldásként a Smart Contract rendszeresen likviditást növel, hogy biztosítsa a token folyamatos fejlődését.",
+      "LpAcquisitionText2": "A Smart Contract minden tranzakcióból egy meghatározott mennyiségű tokent félretesz, és amikor az összegyűjtött rész elér egy bizonyos értéket, automatikusan átváltja azt a likviditási pool feltöltésére. A metódus a Smart Contract keretein belül teljesen automatizált, így biztosítva a funkció biztonságát és átláthatóságát. Így senki nincs kitéve az Impermanent Loss jelenségnek, mert nincs szükség likviditás biztosítására a részesedéssel rendelkezők irányából.",
+      "LpAcquisitionText3": "A nagyobb likviditási poolok csökkentik a swap-hatások volatilitását a teljes rendelkezésre álló kínálattal szemben. Az idő előrehaladtával a likviditás feltöltése egyre növekvő stabilitást biztosít a piaci növekvő kereslet kezelésére.",
+      "LpAcquisitionText4": "A likviditás pool (LP tokenek) zárolva vannak 77 évre (2099.01.01.-ig)",
+      "LpAcquisitionTokenLock1": "WBNB/DEO LP token zár tanúsítványa: ",
+      "LpAcquisitionTokenLock2": "BUSD/DEO LP token zár tanúsítványa: ",
+      "DownloadWhitepaper": "Whitepaper letöltése (PDF)"
     }
   }
 }
