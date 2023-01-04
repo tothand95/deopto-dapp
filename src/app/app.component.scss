@@ -205,7 +205,7 @@ footer {
   background-repeat: no-repeat;
   background-size: max(115rem, 100vw) 100%;
 
-  & > * {
+  &>* {
     padding-left: min(5rem, 5vw);
     padding-right: min(5rem, 5vw);
   }
@@ -248,7 +248,7 @@ footer {
     gap: 1.25rem;
     margin-bottom: 3rem;
 
-    & img{
+    & img {
       width: 3rem;
       height: 3rem;
     }
