@@ -116,9 +116,7 @@ header .menu-bar-container {
   flex-wrap: wrap;
 
   @media only screen and (max-width: $mobile-breakpoint) {
-    // display: none;
     transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
-    // transform: translateX(100vw);
 
     position: fixed;
     top: 0;
