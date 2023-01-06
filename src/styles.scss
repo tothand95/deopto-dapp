@@ -16,6 +16,11 @@ body {
 
 button {
   cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font-family: 'Bai Jamjuree';
 }
 
 button:disabled {
