@@ -16,13 +16,18 @@ export class AppComponent {
   isHeaderDummyDisplayed: boolean = false;
   isMenuOpen: boolean = false;
 
+  get currentLanguage() {
+    return this.translateService.currentLang.toUpperCase();
+  }
+
   constructor(private router: Router, private activeRoute: ActivatedRoute, private translateService: TranslateService) {
     translateService.setDefaultLang('en');
-    translateService.use('hu');
+    translateService.use('en');
 
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         this.isHeaderDummyDisplayed = !val.urlAfterRedirects.includes(DeoptoRoutes.HOME);
+        this.isMenuOpen = false;
       }
     });
   }
@@ -38,5 +43,10 @@ export class AppComponent {
 
   onMenuClick() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  changeLanguage(lang: string) {
+    this.translateService.use(lang);
+    this.isMenuOpen = false;
   }
 }
