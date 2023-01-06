@@ -10,4 +10,20 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maintext{
+  padding-bottom: 20rem;
+  padding-left: 30rem;
+  text-align: left;
+  color: white;
+  font-size: 3em;
+  font-family: 'Suez One', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 1000;
+  margin: 1.75rem 0;
+  max-width: 35rem;
 }

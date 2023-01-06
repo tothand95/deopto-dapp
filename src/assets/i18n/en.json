@@ -83,7 +83,34 @@
       "VotingPowerDesc3": "To successfully participate in the voting, wallets need to have at least 0.001% of holding. With this number of holding, the wallet has a voting power of 1. The system rewards wallets with more holding on a square root based scale, so early on you get much more Voting Power with increasing your token amount but it slows down approaching the ceiling.",
       "VotingPowerDesc4": "Voting Power Ceiling",
       "VotingPowerDesc5": "The procedure rewards wallets with more tokens but it has a ceiling to ensure that everyone has their voice in the voting. The rewarding scale follows a square root scale to lessen the rewarding effect when a wallet has high amounts. For the maximum effect the ceiling is at 1% holding with 300 Voting Power and after 1% the Voting Power is NOT increasing anymore; staying at 300."
-    
+    },
+    "Roadmap": {
+      "RoadmapTitle": "Roadmap",
+      "RoadmapDesc1": "Designing Deopto",
+      "RoadmapDesc2": "Creating Proof of Concept",
+      "RoadmapDesc3": "Testing voting procedure on testnet",
+      "RoadmapDesc4": "Launching Deopto on PancakeSwap with 100% Fair Launch",
+      "RoadmapDesc5": "All Liquidity Pool (LP) tokens are locked until 01.01.2099",
+      "RoadmapDesc6": "Start the first Poll and community Voting",
+      "RoadmapDesc7": "First charity campaign after the successful Voting",
+      "RoadmapDesc8": "News portal, blogs and media appearances",
+      "RoadmapDesc9": "Social media campaign (Twitter, Instagram, Facebook, Telegram)",
+      "RoadmapDesc10": "Apply for BscScan listing",
+      "RoadmapDesc11": "Social media campaign on Youtube",
+      "RoadmapDesc12": "Influencer partnerships",
+      "RoadmapDesc13": "Podcast and video appearances",
+      "RoadmapDesc14": "Apply for CoinGecko and CoinMarketCap listings",
+      "RoadmapDesc15": "Apply for exchange listings",
+      "RoadmapDesc16": "Airdrop campaign",
+      "RoadmapDesc17": "Team expansion",
+      "RoadmapDesc18": "Website update and stability improvements",
+      "RoadmapDesc19": "Deopto wallet",
+      "RoadmapMilestone1": "Summer of 2022",
+      "RoadmapMilestone2": "21st of September",
+      "RoadmapMilestone3": "1000 holder milestone",
+      "RoadmapMilestone4": "2500 holder milestone",
+      "RoadmapMilestone5": "5000 holder milestone",
+      "RoadmapMilestone6": "2023"
     }   
   }
 }
