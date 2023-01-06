@@ -1,8 +1,21 @@
 <header [ngClass]="{ 'sticky': !onTop }">
-  <button class="logo-container">
-    <img class="logo-image" src="assets/global/deopto-logo.svg" alt="DEOPTO">
+  <div class="logo-container">
+    <div class="lang-change-desktop">
+      <span class="lang-change-current">
+        🌐 {{currentLanguage}}
+      </span>
+      <div class="lang-change-dropdown">
+        <div (click)="changeLanguage('en')">
+          <img src="assets/global/flag-en.svg" alt="DEOPTO"> EN
+        </div>
+        <div (click)="changeLanguage('hu')">
+          <img src="assets/global/flag-hu.svg" alt="DEOPTO"> HU
+        </div>
+      </div>
+    </div>
+    <img class="logo-image" src="assets/global/deopto-logo.svg" alt="DEOPTO" (click)="navigateTo('home')">
     <span class="logo-text">DEOPTO</span>
-  </button>
+  </div>
   <div class="menu-bar-container" [ngClass]="{ 'menu-open': isMenuOpen }">
     <button class="menu-point" (click)="navigateTo('home')">{{ 'DEO.Global.Home' | translate}}</button>
     <button class="menu-point" (click)="navigateTo('whitepaper')">{{ 'DEO.Global.Whitepaper' | translate}}</button>
@@ -10,7 +23,7 @@
     <button class="menu-point">{{ 'DEO.Global.Team' | translate}}</button>
     <button class="menu-point" (click)="navigateTo('roadmap')">{{ 'DEO.Global.Roadmap' | translate}}</button>
     <button class="menu-point vote-button" (click)="navigateTo('vote')">{{ 'DEO.Global.Vote' | translate}}</button>
-    <div class="lang-change" [ngClass]="{ 'menu-open': isMenuOpen }">
+    <div class="lang-change-mobile" [ngClass]="{ 'menu-open': isMenuOpen }">
       <button (click)="changeLanguage('en')">
         <img src="assets/global/flag-en.svg" alt="DEOPTO"> EN
       </button>

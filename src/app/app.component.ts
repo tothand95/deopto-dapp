@@ -16,6 +16,10 @@ export class AppComponent {
   isHeaderDummyDisplayed: boolean = false;
   isMenuOpen: boolean = false;
 
+  get currentLanguage() {
+    return this.translateService.currentLang.toUpperCase();
+  }
+
   constructor(private router: Router, private activeRoute: ActivatedRoute, private translateService: TranslateService) {
     translateService.setDefaultLang('en');
     translateService.use('en');
@@ -41,7 +45,7 @@ export class AppComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  changeLanguage(lang: string){
+  changeLanguage(lang: string) {
     this.translateService.use(lang);
     this.isMenuOpen = false;
   }
