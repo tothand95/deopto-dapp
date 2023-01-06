@@ -11,8 +11,6 @@ import { DeoptoRoutes } from './constants/routes';
   animations: [fadeShowAnimation]
 })
 export class AppComponent {
-  title: string = 'deopto-dapp';
-  onTop: boolean = true;
   isHeaderDummyDisplayed: boolean = false;
   isMenuOpen: boolean = false;
 

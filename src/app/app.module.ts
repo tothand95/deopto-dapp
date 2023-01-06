@@ -14,6 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HomeModule } from './home/home.module';
 import { FooterComponent } from './shared/footer/footer.component';
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -39,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
 
     HomeModule,
+    NavBarComponent,
     FooterComponent
   ],
   providers: [],
