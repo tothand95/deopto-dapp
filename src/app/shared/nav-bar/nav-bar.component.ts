@@ -22,6 +22,7 @@ export class NavBarComponent {
 
   navigateTo(route: string) {
     this.router.navigate([route], { relativeTo: this.activeRoute.root });
+    this.isMenuOpen = false;
   }
 
   onMenuClick() {
