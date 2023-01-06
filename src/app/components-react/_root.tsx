@@ -49,7 +49,8 @@ const wagmiClient = createClient({
 const themeOptions: ThemeOptions = {
   borderRadius: 'large',
   fontStack: 'system',
-  overlayBlur: 'small'
+  overlayBlur: 'small',
+  accentColor: '#ff25ff'
 };
 
 export const VoteRoot = () => {
