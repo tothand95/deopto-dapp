@@ -103,3 +103,14 @@ button:disabled {
   color: $logo-purple;
   border-color: $logo-purple;
 }
+
+span.bulletpoint {
+  display: inline-block;
+  width: 0.35rem;
+  height: 0.35rem;
+  margin-bottom: 0.15em;
+  margin-right: 0.4rem;
+  background-color: black;
+  border-radius: 2rem;
+  text-align: left;
+}

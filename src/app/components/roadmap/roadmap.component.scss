@@ -15,17 +15,6 @@
   margin: 1.5rem 0;
 }
 
-.bulletpoint::before {
-  content: '';
-  display: inline-block;
-  width: 0.35em;
-  height: 0.35em;
-  margin-bottom: 0.15em;
-  margin-right: 0.3em;
-  background-color: black;
-  border-radius: 2rem;
-}
-
 .card-desc.bulletpoint {
   margin-left: 2rem;
   margin-top: 0.2rem;
