@@ -1,6 +1,12 @@
+$page-content-width: 50rem;
+
 .connect-button-container {
   display: flex;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: flex-end;
+  max-width: $page-content-width;
 }
 
 .poll-root {
@@ -23,7 +29,7 @@
 .poll-container {
   display: flex;
   flex-direction: column;
-  max-width: 50rem;
+  max-width: $page-content-width;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -54,10 +60,8 @@
 }
 
 .poll-option-selected {
-  background-image: linear-gradient(to right,
-      rgba($color: $highlight-color, $alpha: 0.5),
-      rgba($color: $highlight-color, $alpha: 0.1) 40% 60%,
-      rgba($color: $highlight-color, $alpha: 0.5));
+  background-color: rgba($highlight-color, 0.4);
+  font-weight: 1000;
 }
 
 .poll-notification-error {
