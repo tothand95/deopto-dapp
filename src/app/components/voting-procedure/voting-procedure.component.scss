@@ -48,13 +48,13 @@
   gap: 2rem;
 
   &>img {
-    width: min(100%, 55vw);
+    width: min(100%, 50vw);
   }
 }
 
-.vpower {
-  height: 20rem;
-  width: 55rem;
+.voting-power-chart {
+  margin-top: 2.5rem;
+  width: min(55rem, 100%);
 }
 
 .custom-shape-divider-bottom-1672690925 {
