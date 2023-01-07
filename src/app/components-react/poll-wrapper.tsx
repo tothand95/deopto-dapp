@@ -15,7 +15,7 @@ export const PollWrapper = () => {
   });
 
   return (
-    <div className='poll-root'>
+    <>
       {
         isLoading &&
         <div className='poll-container poll-text-center'>
@@ -36,6 +36,6 @@ export const PollWrapper = () => {
           {error}
         </div>
       }
-    </div>
+    </>
   );
 };

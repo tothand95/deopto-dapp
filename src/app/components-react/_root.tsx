@@ -57,8 +57,10 @@ export const VoteRoot = () => {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider modalSize='wide' theme={darkTheme(themeOptions)} chains={chains} initialChain={bsc}>
-        <ConnectWallet></ConnectWallet>
-        <PollWrapper></PollWrapper>
+        <div className='poll-root'>
+          <ConnectWallet></ConnectWallet>
+          <PollWrapper></PollWrapper>
+        </div>
       </RainbowKitProvider>
     </WagmiConfig>
   );

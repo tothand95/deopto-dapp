@@ -1,17 +1,28 @@
 $page-content-width: 50rem;
 
 .connect-button-container {
-  display: flex;
-  margin-top: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: flex-end;
-  max-width: $page-content-width;
+  font-family: "Bai Jamjuree";
+
+  margin-top: 2rem;
+  align-self: flex-end;
+
+  & button {
+    border-radius: 30rem !important;
+  }
 }
 
 .poll-root {
   font-family: "Bai Jamjuree";
-  font-size: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: $page-content-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: min(4rem, 5vw);
 }
 
 .poll-paragraph {
@@ -29,17 +40,17 @@ $page-content-width: 50rem;
 .poll-container {
   display: flex;
   flex-direction: column;
-  max-width: $page-content-width;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   justify-content: center;
   align-items: stretch;
+
+  font-size: 22px;
+
+  margin: 0 2rem;
+  width: 100%;
 }
 
 .poll-title {
   margin: 1rem;
-  padding-bottom: 1rem;
   border: 0px;
 
   color: black;
