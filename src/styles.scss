@@ -40,7 +40,7 @@ button:disabled {
   background-color: $strip-background-light;
 }
 
-@mixin strip-divided{
+@mixin strip-divided {
   background-image: linear-gradient(to bottom, $strip-background-light 66%, $strip-background-dark)
 }
 
@@ -102,6 +102,10 @@ button:disabled {
   padding: 0.375rem 3rem;
   color: $logo-purple;
   border-color: $logo-purple;
+}
+
+.list-item {
+  text-align: left;
 }
 
 span.bulletpoint {
