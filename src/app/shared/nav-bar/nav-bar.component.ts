@@ -20,8 +20,8 @@ export class NavBarComponent {
 
   constructor(private router: Router, private activeRoute: ActivatedRoute, private translateService: TranslateService) { }
 
-  navigateTo(route: string) {
-    this.router.navigate([route], { relativeTo: this.activeRoute.root });
+  navigateTo(route: string, fragment: string | undefined = undefined) {
+    this.router.navigate([route], { relativeTo: this.activeRoute.root, fragment: fragment });
     this.isMenuOpen = false;
   }
 

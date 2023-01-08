@@ -66,7 +66,7 @@
     "VotingProcedure": {
       "VotingProcedureTitle": "Voting on the blockchain",
       "VotingProcedureDesc1": "Using the blockchain technology like you have never seen before.",
-      "VotingProcedureDesc2": "With the immutable behaviour of the blockchain, all the procedures happening within the Smart Contract ensures transparency and security. Using the blockchain technology like you have never seen before",    
+      "VotingProcedureDesc2": "With the immutable behaviour of the blockchain, all the procedures happening within the Smart Contract ensures transparency and security. Using the blockchain technology like you have never seen before",
       "VotingProcedureDesc3": "This implementation helps us to defeat manipulations of the voting to give every poll option and participant a fair and even playing field.",
       "VotingProcedureDesc4": "We don't have to rely on a third party implementation of storing data for voting, the blockchain controls everything and even the procedure of the voting is hard coded, can't be modified after launch.",
       "VotingProcedureDesc5": "Votes are counted after the poll is closed and the counting begins immediately after closing. Every wallet address can participate in the voting, but the Voting Power calculations are happening at the time of counting.",
@@ -113,6 +113,6 @@
       "RoadmapMilestone4": "2500 holder milestone",
       "RoadmapMilestone5": "5000 holder milestone",
       "RoadmapMilestone6": "2023"
-    }   
+    }
   }
 }
