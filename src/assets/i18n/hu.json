@@ -88,7 +88,9 @@
       "VotingPowerFloorDesc2": "A rendszer négyzetgyök alapú skála mentén jutalmazza a nagyobb értékkel rendelkező pénztárcákat, így kezdetben kisebb mértékű növekedéssel sokkal több szavazati súlyt kap a pénztárca, de a maximumhoz közeledve ez egyre kisebb ütemben növekszik.",
       "VotingPowerCeilingTitle": "Súlyozott szavazat felső határa",
       "VotingPowerCeiling1": "Az eljárás jutalmazza a több tokennel rendelkező pénztárcákat, de van egy felső határa, amely biztosítja, hogy mindenkinek legyen szava a szavazás során.",
-      "VotingPowerCeiling2": "A jutalmazási skála négyzetgyök skálát követ, hogy csökkentse a jutalmazási hatást a plafonhoz közeledve. A maximális hatást 1%-os részesedésnél lehet elérni, ami 300 szavazati súlyt jelent. Az 1%-ot elérve a szavazati súly NEM növekszik tovább, marad 300-on."
+      "VotingPowerCeiling2": "A jutalmazási skála négyzetgyök skálát követ, hogy csökkentse a jutalmazási hatást a plafonhoz közeledve. A maximális hatást 1%-os részesedésnél lehet elérni, ami 300 szavazati súlyt jelent. Az 1%-ot elérve a szavazati súly NEM növekszik tovább, marad 300-on.",
+      "ChartXLegend": "Részesedés",
+      "ChartYLegend": "Szavazati súly"
     },
     "Roadmap": {
       "RoadmapTitle": "Roadmap",

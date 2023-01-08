@@ -52,9 +52,36 @@
   }
 }
 
+.chart-legend-y-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.legend-x {
+  margin-top: 1rem;
+
+  text-align: center;
+  font-size: 1.25em;
+  color: $logo-purple;
+  font-weight: 700;
+}
+
+.legend-y {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin-right: 1rem;
+
+  text-align: center;
+  font-size: 1.25em;
+  color: $logo-purple;
+  font-weight: 700;
+}
+
 .voting-power-chart {
   margin-top: 2.5rem;
-  width: min(55rem, 100%);
+  min-width: 0;
 }
 
 .custom-shape-divider-bottom-1672690925 {

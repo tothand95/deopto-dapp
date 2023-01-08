@@ -89,7 +89,9 @@ header .lang-change-desktop {
 
     width: 5.5rem;
     position: absolute;
-    background-color: #333;
+    background-color: $landing-hero-background;
+    border-radius: 1rem;
+    border: 1px solid $strip-background-light;
     z-index: 99;
 
     &>div {
