@@ -3,10 +3,11 @@ import { bsc } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { ThemeOptions } from '@rainbow-me/rainbowkit/dist/themes/baseTheme';
-import { RainbowKitProvider, connectorsForWallets, darkTheme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, connectorsForWallets, darkTheme, Theme } from '@rainbow-me/rainbowkit';
 import { braveWallet, coinbaseWallet, ledgerWallet, trustWallet, metaMaskWallet, walletConnectWallet, injectedWallet, rainbowWallet, omniWallet, imTokenWallet, argentWallet } from '@rainbow-me/rainbowkit/wallets';
 import { PollWrapper } from './poll-wrapper';
 import { ConnectWallet } from './connect-wallet';
+import merge from 'lodash.merge';
 
 const appName = 'Deopto';
 
@@ -50,13 +51,23 @@ const themeOptions: ThemeOptions = {
   borderRadius: 'large',
   fontStack: 'system',
   overlayBlur: 'small',
-  accentColor: '#ff25ff'
 };
+
+const myTheme = merge(darkTheme(themeOptions), {
+  colors: {
+    connectButtonText: '#ff25ff',
+    accentColor: '#ff25ff'
+  },
+  radii: {
+    actionButton: '30rem',
+    connectButton: '30rem',
+  },
+} as Theme);
 
 export const VoteRoot = () => {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider modalSize='wide' theme={darkTheme(themeOptions)} chains={chains} initialChain={bsc}>
+      <RainbowKitProvider modalSize='wide' theme={myTheme} chains={chains} initialChain={bsc}>
         <div className='poll-root'>
           <ConnectWallet></ConnectWallet>
           <PollWrapper></PollWrapper>
