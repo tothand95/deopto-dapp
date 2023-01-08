@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class WhitepaperComponent {
 
+  downloadWhitepaper() {
+    window.open('/assets/global/Deopto-whitepaper-2022-11.pdf', '_blank');
+  }
+
 }
