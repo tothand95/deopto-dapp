@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import { ConnectorNotFoundError, useContractRead, useContractWrite, useNetwork, useSwitchNetwork } from 'wagmi';
+import { ConnectorNotFoundError, useAccount, useContractRead, useContractWrite, useNetwork, useSwitchNetwork } from 'wagmi';
 import deoptoAbi from 'src/assets/deopto.abi.json'
-import { contractAddressLive, contractAddressTest } from './constants';
+import { contractAddressLive } from './constants';
 import { LoadingIndicator } from './loading-indicator';
 import { bsc } from 'wagmi/chains';
 
@@ -19,6 +19,7 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
   const bnbChainId = bsc.id;
   const { chain } = useNetwork();
   const { switchNetwork } = useSwitchNetwork();
+  const { isConnected } = useAccount()
 
   const [pollOptions, setPollOptions] = useState([] as PollOption[]);
   const [voteTransactionError, setVoteTransactionError] = useState('');
@@ -107,13 +108,16 @@ export const Poll = ({ pollIndex }: PollComponentInputs) => {
               </div>
             })
           }
-          <div className='vote-button-container'>
-            {
-              chain?.id !== bnbChainId &&
-              <button className='deopto-button' onClick={changeNetwork}>Change network</button>
-            }
-            <button className='deopto-button' disabled={chain?.id !== bnbChainId} onClick={sendVoteRequest}>Send vote!</button>
-          </div>
+          {
+            isConnected &&
+            <div className='vote-button-container'>
+              {
+                chain?.id !== bnbChainId &&
+                <button className='deopto-button' onClick={changeNetwork}>Change network</button>
+              }
+              <button className='deopto-button' disabled={chain?.id !== bnbChainId} onClick={sendVoteRequest}>Send vote!</button>
+            </div>
+          }
         </>
       }
       {
