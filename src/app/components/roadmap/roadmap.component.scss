@@ -1,6 +1,6 @@
 @import "src/variables.scss";
 
-.strip-title {
+.page-title {
   text-align: center;
   font-size: 2.5em;
   font-family: 'Suez One', sans-serif;
@@ -8,96 +8,96 @@
   margin: 1.75rem 0;
 }
 
-.card-desc {
-  text-align: justify;
-  font-size: 1.2em;
-  line-height: 1.4;
-  margin: 1.5rem 0;
-}
+// .card-desc {
+//   text-align: justify;
+//   font-size: 1.2em;
+//   line-height: 1.4;
+//   margin: 1.5rem 0;
+// }
 
-.card-desc.bulletpoint {
-  margin-left: 2rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
+// .card-desc.bulletpoint {
+//   margin-left: 2rem;
+//   margin-top: 0.2rem;
+//   margin-bottom: 0.2rem;
+// }
 
-.card-desc-subtitle{
-  text-align: center;
-  font-size: 1.3em;
-  font-family: 'Suez One', sans-serif;
-  color: #fff;
-}
+// .card-desc-subtitle{
+//   text-align: center;
+//   font-size: 1.3em;
+//   font-family: 'Suez One', sans-serif;
+//   color: #fff;
+// }
 
-.timeline {
-  margin: auto;
-  margin-right: 30rem;
-  width: 700px;
-  padding: 30px 20px;
-}
+// .timeline {
+//   margin: auto;
+//   margin-right: 30rem;
+//   width: 700px;
+//   padding: 30px 20px;
+// }
 
-.timeline ul {
-  list-style-type: none;
-  border-left: 2px solid #8f008f;
-  padding: 10px 5px;
-}
+// .timeline ul {
+//   list-style-type: none;
+//   border-left: 2px solid #8f008f;
+//   padding: 10px 5px;
+// }
 
-.timeline ul li {
-  padding: 20px 20px;
-  position: relative;
-  cursor: pointer;
-  transition: .5s;
-}
+// .timeline ul li {
+//   padding: 20px 20px;
+//   position: relative;
+//   cursor: pointer;
+//   transition: .5s;
+// }
 
-.timeline ul li span {
-  display: inline-block;
-  background-color: #c300ff;
-  border-radius: 25px;
-  padding: 2px 5px;
-  font-size: 15px;
-  text-align: center;
-}
+// .timeline ul li span {
+//   display: inline-block;
+//   background-color: #c300ff;
+//   border-radius: 25px;
+//   padding: 2px 5px;
+//   font-size: 15px;
+//   text-align: center;
+// }
 
-.timeline ul li .content h3 {
-  color: #34ace0;
-  font-size: 17px;
-  padding-top: 5px;
-}
+// .timeline ul li .content h3 {
+//   color: #34ace0;
+//   font-size: 17px;
+//   padding-top: 5px;
+// }
 
-.timeline ul li .content p {
-  padding: 5px 0px 15px 0px;
-  font-size: 15px;
-}
+// .timeline ul li .content p {
+//   padding: 5px 0px 15px 0px;
+//   font-size: 15px;
+// }
 
-.timeline ul li:before {
-  position: absolute;
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: #e034ac;
-  border-radius: 50%;
-  left: -11px;
-  top: 28px;
-  transition: .5s;
-}
+// .timeline ul li:before {
+//   position: absolute;
+//   content: '';
+//   width: 10px;
+//   height: 10px;
+//   background-color: #e034ac;
+//   border-radius: 50%;
+//   left: -11px;
+//   top: 28px;
+//   transition: .5s;
+// }
 
-.timeline ul li:hover {
-  background-color: #e9e9e9;
-}
+// .timeline ul li:hover {
+//   background-color: #e9e9e9;
+// }
 
-.timeline ul li:hover:before {
-  background-color: rgb(0, 110, 255);
-  box-shadow: 0px 0px 10px 2px rgb(4, 0, 255);
-}
+// .timeline ul li:hover:before {
+//   background-color: rgb(0, 110, 255);
+//   box-shadow: 0px 0px 10px 2px rgb(4, 0, 255);
+// }
 
-@media (max-width:300px) {
-  .timeline {
-    width: 100%;
-    padding: 30px 5px 30px 10px;
-  }
+// @media (max-width:300px) {
+//   .timeline {
+//     width: 100%;
+//     padding: 30px 5px 30px 10px;
+//   }
 
-  .timeline ul li .content h3 {
-    color: #34ace0;
-    font-size: 15px;
-  }
+//   .timeline ul li .content h3 {
+//     color: #34ace0;
+//     font-size: 15px;
+//   }
 
-}
+// }
