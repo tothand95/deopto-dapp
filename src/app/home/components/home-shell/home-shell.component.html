@@ -1,16 +1,12 @@
 <div class="landing-page-banner">
   <div class="maintext">
-    <div>
-      Control the purpose of the token
-    </div>
-    <div>
-      Ambitions chosen by You
-    </div>
+    <div> {{ 'DEO.Home.HeroTitle1' | translate }} </div>
+    <div> {{ 'DEO.Home.HeroTitle2' | translate }} </div>
     <button class="deopto-button" (click)="navigateBuyDeopto()">
-      Buy Deopto ►
+      {{ 'DEO.Home.BuyButton' | translate }}
     </button>
     <a href="https://bscscan.com/token/0xF918C5f9fcee3FFE7C27612e76eB2d27AA357e90" target="_blank">
-      View on BscScan
+      {{ 'DEO.Home.ViewBscScan' | translate }}
     </a>
   </div>
 </div>

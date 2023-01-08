@@ -60,7 +60,7 @@ header {
     text-shadow: rgba(black, 0.7) 1px 1px 3px;
     letter-spacing: 0.125em;
 
-
+    cursor: pointer;
   }
 }
 
@@ -89,7 +89,9 @@ header .lang-change-desktop {
 
     width: 5.5rem;
     position: absolute;
-    background-color: #333;
+    background-color: $landing-hero-background;
+    border-radius: 1rem;
+    border: 1px solid $strip-background-light;
     z-index: 99;
 
     &>div {

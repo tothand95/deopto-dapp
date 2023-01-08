@@ -12,6 +12,10 @@
       "Link": "(link)"
     },
     "Home": {
+      "HeroTitle1": "Control the purpose of the token",
+      "HeroTitle2": "Ambitions chosen by You",
+      "BuyButton": "Buy Deopto ►",
+      "ViewBscScan": "View on BscScan",
       "PowerTitle": "The Power in your tokens",
       "PowerDesc": "Our goal is to help a cause what the community find worthy. You can participate in a voting periodically to determine what the raised funds from the transactions will be used for.",
       "InnovationTitle": "Innovative voting",
@@ -84,7 +88,9 @@
       "VotingPowerFloorDesc2": "The system rewards wallets with more holding on a square root based scale, so early on you get much more Voting Power with increasing your token amount but it slows down approaching the ceiling.",
       "VotingPowerCeilingTitle": "Voting Power Ceiling",
       "VotingPowerCeiling1": "The procedure rewards wallets with more tokens but it has a ceiling to ensure that everyone has their voice in the voting.",
-      "VotingPowerCeiling2": "The rewarding scale follows a square root scale to lessen the rewarding effect when a wallet has high amounts. For the maximum effect the ceiling is at 1% holding with 300 Voting Power and after 1% the Voting Power is NOT increasing anymore; staying at 300."
+      "VotingPowerCeiling2": "The rewarding scale follows a square root scale to lessen the rewarding effect when a wallet has high amounts. For the maximum effect the ceiling is at 1% holding with 300 Voting Power and after 1% the Voting Power is NOT increasing anymore; staying at 300.",
+      "ChartXLegend": "Holdings",
+      "ChartYLegend": "Voting power"
     },
     "Roadmap": {
       "RoadmapTitle": "Roadmap",
