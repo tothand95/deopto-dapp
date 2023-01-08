@@ -1,72 +1,8 @@
-<header [ngClass]="{ 'sticky': !onTop }">
-  <div class="logo-container">
-    <div class="lang-change-desktop">
-      <span class="lang-change-current">
-        🌐 {{currentLanguage}}
-      </span>
-      <div class="lang-change-dropdown">
-        <div (click)="changeLanguage('en')">
-          <img src="assets/global/flag-en.svg" alt="DEOPTO"> EN
-        </div>
-        <div (click)="changeLanguage('hu')">
-          <img src="assets/global/flag-hu.svg" alt="DEOPTO"> HU
-        </div>
-      </div>
-    </div>
-    <img class="logo-image" src="assets/global/deopto-logo.svg" alt="DEOPTO" (click)="navigateTo('home')">
-    <span class="logo-text">DEOPTO</span>
-  </div>
-  <div class="menu-bar-container" [ngClass]="{ 'menu-open': isMenuOpen }">
-    <button class="menu-point" (click)="navigateTo('home')">{{ 'DEO.Global.Home' | translate}}</button>
-    <button class="menu-point" (click)="navigateTo('whitepaper')">{{ 'DEO.Global.Whitepaper' | translate}}</button>
-    <button class="menu-point" (click)="navigateTo('voting-procedure')">{{ 'DEO.Global.VotingProcedure' | translate}}</button>
-    <button class="menu-point">{{ 'DEO.Global.Team' | translate}}</button>
-    <button class="menu-point" (click)="navigateTo('roadmap')">{{ 'DEO.Global.Roadmap' | translate}}</button>
-    <button class="menu-point vote-button" (click)="navigateTo('vote')">{{ 'DEO.Global.Vote' | translate}}</button>
-    <div class="lang-change-mobile" [ngClass]="{ 'menu-open': isMenuOpen }">
-      <button (click)="changeLanguage('en')">
-        <img src="assets/global/flag-en.svg" alt="DEOPTO"> EN
-      </button>
-      <button (click)="changeLanguage('hu')">
-        <img src="assets/global/flag-hu.svg" alt="DEOPTO"> HU
-      </button>
-    </div>
-  </div>
-
-  <button class="hamburger-menu-button" (click)="onMenuClick()">
-    <div class="menu-icon-1" [ngClass]="{ 'menu-open': isMenuOpen }"></div>
-    <div class="menu-icon-2" [ngClass]="{ 'menu-open': isMenuOpen }"></div>
-    <div class="menu-icon-3" [ngClass]="{ 'menu-open': isMenuOpen }"></div>
-  </button>
-</header>
+<app-nav-bar></app-nav-bar>
 
 <div class="main-container" [@fadeShowAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
   <div *ngIf="isHeaderDummyDisplayed" class="header-dummy"></div>
   <router-outlet #outlet="outlet"></router-outlet>
 
-  <footer>
-    <div class="logo-container">
-      <img class="logo-image" src="assets/global/deopto-logo.svg" alt="DEOPTO">
-      <span class="logo-text">DEOPTO</span>
-    </div>
-    <div class="social-links">
-      <a href="https://t.me/deopto" target="blank">
-        <img src="assets/global/telegram-logo.png" alt="Telegram">
-      </a>
-      <a href="https://twitter.com/deopto" target="blank">
-        <img src="assets/global/twitter-logo.png" alt="Twitter">
-      </a>
-      <a href="https://discord.gg/ttm9TKEQPP" target="blank">
-        <img src="assets/global/discord-logo.png" alt="Discord">
-      </a>
-      <a href="https://www.facebook.com/deopto.token" target="blank">
-        <img src="assets/global/facebook-logo.png" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/deopto_token/" target="blank">
-        <img src="assets/global/instagram-logo.png" alt="Instagram">
-      </a>
-    </div>
-    <div class="contact">{{ 'DEO.Global.Contact' | translate}}deopto.token@gmail.com</div>
-    <div class="copyright">{{ 'DEO.Global.Copyright' | translate}}</div>
-  </footer>
+  <app-footer></app-footer>
 </div>

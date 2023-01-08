@@ -8,7 +8,8 @@
       "Roadmap": "Ütemterv",
       "Team": "Csapatunk",
       "Contact": "Elérhetőség: ",
-      "Copyright": "© 2022 Deopto csapata által büszkén, szeretettel alkotva"
+      "Copyright": "© 2022 Deopto csapata által büszkén, szeretettel alkotva",
+      "Link": "(link)"
     },
     "Home": {
       "PowerTitle": "A tokenben rejlő erő",
@@ -61,6 +62,58 @@
       "LpAcquisitionTokenLock1": "WBNB/DEO LP token zár tanúsítványa: ",
       "LpAcquisitionTokenLock2": "BUSD/DEO LP token zár tanúsítványa: ",
       "DownloadWhitepaper": "Whitepaper letöltése (PDF)"
+    },
+    "VotingProcedure": {
+      "VotingProcedureTitle": "Szavazás a blokkláncon keresztül",
+      "VotingProcedureDesc1": "A blokklánc technológia, ahogy még soha nem láttad.",
+      "VotingProcedureDesc2": "A blokklánc adta lehetőségek révén a Smart Contracton belüli összes eljárás biztosítja az átláthatóságot és a biztonságot.",
+      "VotingProcedureDesc3": "Ez a megvalósítás segít abban, hogy legyőzzük a szavazással kapcsolatos manipulációkat, hogy minden szavazási lehetőség és résztvevő számára tisztességes és egyenletes játékteret biztosítsunk.",
+      "VotingProcedureDesc4": "A szavazáshoz nem kell harmadik féltől származó adattárolásra hagyatkoznunk, a blokklánc irányít mindent, sőt a szavazás menete is a Smart Contracton történik, indulás után már nem módosítható.",
+      "VotingProcedureDesc5": "A szavazatszámlálás a szavazás lezárása után történik, és a számlálás közvetlenül a zárást követően kezdődik. Minden pénztárca részt vehet a szavazáson, a szavazat súlya pedig a szavazatszámlálás időpontjában kerül meghatározásra.",
+      "VotingProcedureList1": "Névtelen szavazás",
+      "VotingProcedureList2": "A szavazatokat decentralizáltan tároljuk a blokkláncon",
+      "VotingProcedureList3": "A szavazatok nem módosíthatóak senki által",
+      "VotingProcedureList4": "A szavazatok eredményei változatlanul tárolódnak a blokkláncon",
+      "VotingProcedureList5": "A szavazás eredményeit visszamenőlegesen a blokklánc tárolja",
+      "VotingProcedureList6": "A szavazatszámlálás a szavazás lezárása után történik a manipuláció elkerülése érdekében",
+      "VotingPowerTitle": "Súlyozott szavazat",
+      "VotingPowerDesc": "Minden leadott szavazat rendelkezik egy súlyozással, amely a pénztárca Deopto állományából kerül kiszámításra.",
+      "VotingPowerDesc1": "A szavazati súly számítása a szavazás lezárása után történik, ezért fontos, hogy a számítások elvégzésekor kell rendelkeznie a pénztárcának a megfelelő állománnyal. A szavazás időpontjában nem számít, hogy a pénztárca mekkora állománnyal rendelkezik.",
+      "VotingPowerFloorTitle": "Súlyozott szavazat alsó szintje",
+      "VotingPowerFloorDesc1": "A szavazásban való sikeres részvételhez a pénztárcáknak legalább 0,001% Deopto állománnyal kell rendelkezni. Ennyi token mellett a pénztárca szavazati súlya 1 lesz.",
+      "VotingPowerFloorDesc2": "A rendszer négyzetgyök alapú skála mentén jutalmazza a nagyobb értékkel rendelkező pénztárcákat, így kezdetben kisebb mértékű növekedéssel sokkal több szavazati súlyt kap a pénztárca, de a maximumhoz közeledve ez egyre kisebb ütemben növekszik.",
+      "VotingPowerCeilingTitle": "Súlyozott szavazat felső határa",
+      "VotingPowerCeiling1": "Az eljárás jutalmazza a több tokennel rendelkező pénztárcákat, de van egy felső határa, amely biztosítja, hogy mindenkinek legyen szava a szavazás során.",
+      "VotingPowerCeiling2": "A jutalmazási skála négyzetgyök skálát követ, hogy csökkentse a jutalmazási hatást a plafonhoz közeledve. A maximális hatást 1%-os részesedésnél lehet elérni, ami 300 szavazati súlyt jelent. Az 1%-ot elérve a szavazati súly NEM növekszik tovább, marad 300-on."
+    },
+    "Roadmap": {
+      "RoadmapTitle": "Roadmap",
+      "Milestone1Title": "Summer of 2022",
+      "Milestone1Desc1": "Deopto token tervezése",
+      "Milestone1Desc2": "Működő koncepció létrehozása",
+      "Milestone1Desc3": "Szavazati rendszer tesztelése tesztneten",
+      "Milestone2Title": "2022. szeptember 21.",
+      "Milestone2Desc1": "A Deopto elindítása PancakeSwap-on 100% Fair Launch keretében",
+      "Milestone2Desc2": "Likviditás (LP token) zárolva 2099.01.01-ig",
+      "Milestone3Title": "1000 holder mérföldkő",
+      "Milestone3Desc1": "Az első szavazás lebonyolítása",
+      "Milestone3Desc2": "Új szavazások rendszeres időközönként, kéthavonta",
+      "Milestone3Desc3": "Az első jótékonysági kampány a sikeres szavazás után",
+      "Milestone3Desc4": "Hírpotál-, blog-, ls médiamegjelenések",
+      "Milestone3Desc5": "Közösségi média kampány (Twitter, Instagram, Facebook, Telegram)",
+      "Milestone3Desc6": "Kérvény a BscScan listázásra",
+      "Milestone4Title": "2500 holder mérföldkő",
+      "Milestone4Desc1": "Közösségi média kampány a Youtube-on",
+      "Milestone4Desc2": "Közreműködés influenszerekkel",
+      "Milestone4Desc3": "Podcast és videó megjelenések",
+      "Milestone4Desc4": "Kérvény a CoinGecko és a CoinMarketCap liztázásra",
+      "Milestone5Title": "5000 holder mérföldkő",
+      "Milestone5Desc1": "Listázás tőzsdékre",
+      "Milestone5Desc2": "Airdrop kampány",
+      "Milestone6Title": "2023 vége",
+      "Milestone6Desc1": "Csapatunk bővítése",
+      "Milestone6Desc2": "Weboldal fejlesztése és stabilistási fejlesztések",
+      "Milestone6Desc3": "Deopto wallet"
     }
   }
 }

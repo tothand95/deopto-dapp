@@ -1,105 +1,78 @@
 @import "src/variables.scss";
 
-.card-text-wrapper {
-    display: block;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: min(55rem, 100%);
-    gap: 1.5rem;
+.strip-y>div,
+.strip-y-divided>div {
+  width: min(55rem, 100%);
 }
 
-.card-title {
-    text-align: center;
-    font-size: 2.5em;
-    font-family: 'Suez One', sans-serif;
-    font-weight: 1000;
-    margin: 1.75rem 0;
+.highlight-text {
+  color: $logo-purple;
 }
 
-.card-subtitle {
-    text-align: center;
-    font-size: 1.2em;
-    line-height: 1.4;
-    margin: 1.5rem 0;
+.strip-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Suez One', sans-serif;
+  font-weight: 1000;
+  margin: 1.75rem 0;
 }
 
-.card-desc {
-    text-align: justify;
-    font-size: 1.2em;
-    line-height: 1.4;
-    margin: 1.5rem 0;
+.strip-desc {
+  text-align: justify;
+  font-size: 1.2em;
+  line-height: 1.4;
+  text-indent: $paragraph-indent;
+  margin: 0.75rem 0;
 }
 
-.card-desc-subtitle{
-    text-align: center;
-    font-size: 1.5em;
-    font-family: 'Suez One', sans-serif;
-    font-weight: 1000;
-    margin-top: 2rem;
+.strip-desc-subtitle {
+  text-align: left;
+  text-indent: $paragraph-indent;
+  font-size: 1.5em;
+  font-family: 'Suez One', sans-serif;
+  font-weight: 1000;
+  margin: 0.75rem 0;
 }
 
-.card-desc-highlight {
-    text-align: justify;
-    margin: 1.75rem 0;
-    @extend .card-desc;
-    color: $logo-purple;
-    margin-top: 0.2rem;
-    margin-bottom: 0.2rem;
+.bullet-points-wrapper>.strip-desc {
+  margin-left: 3rem;
+  max-width: 48rem;
+  text-indent: -0.75em;
 }
 
-.bulletpoint::before {
-    content: '';
-    display: inline-block;
-    width: 0.35em;
-    height: 0.35em;
-    margin-bottom: 0.15em;
-    margin-right: 0.3em;
-    background-color: black;
-    border-radius: 2rem;
+.grid-side-image {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
+  place-items: center;
+  gap: 2rem;
+
+  &>img {
+    width: min(100%, 50vw);
+  }
 }
 
-.card-desc.bulletpoint {
-    margin-left: 2rem;
-    margin-top: 0.2rem;
-    margin-bottom: 0.2rem;
-}
-
-.card-image {
-    width: min(23rem, 55vw);
-    margin-left: 1.5rem;
-    margin-top: 3.5rem;
-    float: right;
-}
-
-.card-image2 {
-    width: min(23rem, 55vw);
-    margin-right: 2rem;
-    margin-top: 6rem;
-    margin-bottom: 10rem;
-    float: left;
-}
-
-.vpower{
-    height: 20rem;
-    width: 55rem;
+.voting-power-chart {
+  margin-top: 2.5rem;
+  width: min(55rem, 100%);
 }
 
 .custom-shape-divider-bottom-1672690925 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 
-    & svg {
-        position: relative;
-        display: block;
-        width: 188%;
-        height: $divider-height;
-        transform: rotateY(180deg) translateY(1px);
-    }
+  & svg {
+    position: relative;
+    display: block;
+    width: 188%;
+    height: $divider-height;
+    transform: rotateY(180deg) translateY(1px);
+  }
 
-    & .shape-fill {
-        fill: $strip-background-light;
-    }
+  & .shape-fill {
+    fill: $strip-background-light;
+  }
 }
