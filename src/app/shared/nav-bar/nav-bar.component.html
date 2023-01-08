@@ -13,16 +13,16 @@
         </div>
       </div>
     </div>
-    <img class="logo-image" src="assets/global/deopto-logo.svg" alt="DEOPTO" (click)="navigateTo('home')">
-    <span class="logo-text">DEOPTO</span>
+    <img class="logo-image" src="assets/global/deopto-logo.svg" alt="DEOPTO" (click)="navigateTo(deoptoRoutes.HOME)">
+    <span class="logo-text" (click)="navigateTo(deoptoRoutes.HOME)">DEOPTO</span>
   </div>
   <div class="menu-bar-container" [ngClass]="{ 'menu-open': isMenuOpen }">
-    <button class="menu-point" (click)="navigateTo('home')">{{ 'DEO.Global.Home' | translate}}</button>
-    <button class="menu-point" (click)="navigateTo('whitepaper')">{{ 'DEO.Global.Whitepaper' | translate}}</button>
-    <button class="menu-point" (click)="navigateTo('voting-procedure')">{{ 'DEO.Global.VotingProcedure' | translate}}</button>
-    <button class="menu-point" (click)="navigateTo('home', 'team')">{{ 'DEO.Global.Team' | translate}}</button>
-    <button class="menu-point" (click)="navigateTo('roadmap')">{{ 'DEO.Global.Roadmap' | translate}}</button>
-    <button class="menu-point vote-button" (click)="navigateTo('vote')">{{ 'DEO.Global.Vote' | translate}}</button>
+    <button class="menu-point" (click)="navigateTo(deoptoRoutes.HOME)">{{ 'DEO.Global.Home' | translate}}</button>
+    <button class="menu-point" (click)="navigateTo(deoptoRoutes.WHITEPAPER)">{{ 'DEO.Global.Whitepaper' | translate}}</button>
+    <button class="menu-point" (click)="navigateTo(deoptoRoutes.VOTING_PROCEDURE)">{{ 'DEO.Global.VotingProcedure' | translate}}</button>
+    <button class="menu-point" (click)="navigateTo(deoptoRoutes.HOME, deoptoRoutes.FRAGMENT_TEAM)">{{ 'DEO.Global.Team' | translate}}</button>
+    <button class="menu-point" (click)="navigateTo(deoptoRoutes.ROADMAP)">{{ 'DEO.Global.Roadmap' | translate}}</button>
+    <button class="menu-point vote-button" (click)="navigateTo(deoptoRoutes.VOTE)">{{ 'DEO.Global.Vote' | translate}}</button>
     <div class="lang-change-mobile" [ngClass]="{ 'menu-open': isMenuOpen }">
       <button (click)="changeLanguage('en')">
         <img src="assets/global/flag-en.svg" alt="DEOPTO"> EN
