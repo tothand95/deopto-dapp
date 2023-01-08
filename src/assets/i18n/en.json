@@ -12,6 +12,10 @@
       "Link": "(link)"
     },
     "Home": {
+      "HeroTitle1": "Control the purpose of the token",
+      "HeroTitle2": "Ambitions chosen by You",
+      "BuyButton": "Buy Deopto ►",
+      "ViewBscScan": "View on BscScan",
       "PowerTitle": "The Power in your tokens",
       "PowerDesc": "Our goal is to help a cause what the community find worthy. You can participate in a voting periodically to determine what the raised funds from the transactions will be used for.",
       "InnovationTitle": "Innovative voting",

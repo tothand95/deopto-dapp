@@ -12,6 +12,10 @@
       "Link": "(link)"
     },
     "Home": {
+      "HeroTitle1": "Irányítsd a token célját",
+      "HeroTitle2": "A Te ambicióid",
+      "BuyButton": "Deopto vásárlása ►",
+      "ViewBscScan": "Megtekintés a BscScan-en",
       "PowerTitle": "A tokenben rejlő erő",
       "PowerDesc": "Célunk, hogy olyan ügyet segítsünk, amit a közösség méltónak talál. Rendszeresen részt vehetsz egy szavazáson, amely meghatározza, hogy a tranzakciókból befolyt összeget mire legyen felhasználva.",
       "InnovationTitle": "Innovatív szavazás",
