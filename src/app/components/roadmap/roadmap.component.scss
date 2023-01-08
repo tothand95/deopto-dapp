@@ -8,6 +8,74 @@
   margin: 1.75rem 0;
 }
 
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: 1fr 3rem 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.milestone-container {
+  display: flex;
+  flex-direction: column;
+  width: min(27rem, 100%);
+  grid-column-start: 3;
+  padding: 1rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.3em;
+  font-family: 'Suez One', sans-serif;
+  color: #fff;
+  border-radius: 30rem;
+  background-color: $logo-purple;
+  margin-bottom: 1rem;
+}
+
+.milestone-desc {
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin: 0rem 1rem;
+  text-indent: -0.75em;
+}
+
+.milestone-1 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.milestone-2 {
+  grid-row-start: 2;
+  grid-column-start: 3;
+}
+
+.milestone-3 {
+  grid-row-start: 3;
+  grid-column-start: 1;
+}
+
+.milestone-4 {
+  grid-row-start: 4;
+  grid-column-start: 3;
+}
+
+.milestone-5 {
+  grid-row-start: 5;
+  grid-column-start: 1;
+}
+
+.milestone-6 {
+  grid-row-start: 6;
+  grid-column-start: 3;
+}
+
+
+
+
+
+
 // .card-desc {
 //   text-align: justify;
 //   font-size: 1.2em;
@@ -21,12 +89,6 @@
 //   margin-bottom: 0.2rem;
 // }
 
-// .card-desc-subtitle{
-//   text-align: center;
-//   font-size: 1.3em;
-//   font-family: 'Suez One', sans-serif;
-//   color: #fff;
-// }
 
 // .timeline {
 //   margin: auto;
