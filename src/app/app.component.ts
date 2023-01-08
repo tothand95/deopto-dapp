@@ -15,9 +15,9 @@ export class AppComponent {
   isHeaderDummyDisplayed: boolean = false;
 
   constructor(router: Router, translateService: TranslateService) {
-
+    const storageLang = localStorage.getItem('language');
     translateService.setDefaultLang('en');
-    translateService.use('en');
+    translateService.use(storageLang ?? 'en');
 
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {

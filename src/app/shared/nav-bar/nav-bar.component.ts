@@ -32,5 +32,7 @@ export class NavBarComponent {
   changeLanguage(lang: string) {
     this.translateService.use(lang);
     this.isMenuOpen = false;
+
+    localStorage.setItem('language', lang);
   }
 }
