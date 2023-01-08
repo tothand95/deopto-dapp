@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomeShellComponent {
 
+  navigateBuyDeopto(){
+    window.open('https://pancakeswap.finance/swap?outputCurrency=0xF918C5f9fcee3FFE7C27612e76eB2d27AA357e90', '_blank');
+  }
+
 }

@@ -7,7 +7,6 @@ import { WhitepaperComponent } from './components/whitepaper/whitepaper.componen
 import { DeoptoRoutes } from 'src/app/constants/routes';
 import { HomeShellComponent } from './home/components/home-shell/home-shell.component';
 
-
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: DeoptoRoutes.HOME },
   { path: DeoptoRoutes.HOME, component: HomeShellComponent },

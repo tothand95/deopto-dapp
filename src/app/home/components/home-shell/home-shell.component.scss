@@ -12,18 +12,59 @@
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    justify-content: end;
+    background-attachment: local;
+    height: 46rem;
+    background-position-x: 57%;
+  }
 }
 
-.maintext{
-  padding-bottom: 20rem;
-  padding-left: 30rem;
-  text-align: left;
-  color: white;
-  font-size: 3em;
-  font-family: 'Suez One', sans-serif;
-  letter-spacing: 2px;
-  font-weight: 1000;
-  margin: 1.75rem 0;
-  max-width: 35rem;
+.maintext {
+  color: $strip-background-light;
+
+  margin-left: 18vw;
+  max-width: 25rem;
+  margin-top: $header-height + 2*$header-padding + 2rem;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    width: 70vw;
+    margin-right: 2rem;
+    margin-top: $header-height + 2*$header-padding + 1.5rem;
+  }
+
+  &>div {
+    @media only screen and (max-width: $mobile-breakpoint) {
+      font-size: 1.8em;
+    }
+
+    font-size: 2.5em;
+    font-family: 'Suez One',
+    sans-serif;
+    text-align: left;
+    margin: 0.75rem 0rem;
+
+    text-shadow: 2px 2px 5px rgba(black, 0.6),
+    2px -2px 5px rgba(black, 0.6),
+    -2px 2px 5px rgba(black, 0.6),
+    -2px -2px 5px rgba(black, 0.6);
+  }
+
+  &>button {
+    width: 100%;
+
+    &:hover {
+      background-color: $logo-purple;
+      color: $strip-background-light;
+    }
+  }
+
+  &>a {
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    color: $strip-background-light;
+  }
 }
