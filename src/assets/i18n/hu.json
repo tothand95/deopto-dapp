@@ -7,7 +7,7 @@
       "Vote": "Szavazz!",
       "Roadmap": "Ütemterv",
       "Team": "Csapatunk",
-      "HowToBuy": "How to buy",
+      "HowToBuy": "Hogyan vásárolj",
       "Contact": "Elérhetőség: ",
       "Copyright": "© 2022 Deopto csapata által büszkén, szeretettel alkotva",
       "Link": "(link)"
@@ -141,9 +141,9 @@
       "Step8Title": "8. Pénz küldése a walletre",
       "Step8Desc": "A \"Receive\" vagy a \"Buy\" funkció segítségével tudsz pénzt rakni a walletre.",
       "Step9Title": "9. Böngésző megnyitása",
-      "Step9Desc": "Az app menüjében válaszd ki a „Browser”-t, és keresd  fel a pancakeswap.finance oldalt!",
+      "Step9Desc": "Az app menüjében válaszd ki a \"Browser\"-t, és keresd  fel a pancakeswap.finance oldalt!",
       "Step10Title": "10. Wallet csatlakoztatása",
-      "Step10Desc": "Amint megnyílik a Pancake Swap a böngészőben, csatlakozz a „Connect” gombbal!",
+      "Step10Desc": "Amint megnyílik a Pancake Swap a böngészőben, csatlakozz a \"Connect\" gombbal!",
       "Step11Title": "11. Pancake Swap csatlakozás",
       "Step11Desc": "A MetaMask alkalmazáson belül egyetlen lehetőségünk a MetaMask kiválasztása a csatlakozáshoz",
       "Step12Title": "12. Csatlakozás megerősítése",
@@ -159,7 +159,9 @@
       "Step17Title": "17. Slippage beállítása",
       "Step17Desc": "Állítsd a slippage értéket 10%-nál nagyobbra! (szükség van rá, mert a tokennek 10%-os díja van)",
       "Step18Title": "18. Token vásárlása",
-      "Step18Desc": "Utolsó lépés. Állítsd be, mennyi tokent szeretnél vásárolni, majd \"Swap\", és erősítsd meg a cserét!"
+      "Step18Desc": "Utolsó lépés. Állítsd be, mennyi tokent szeretnél vásárolni, majd \"Swap\", és erősítsd meg a cserét!",
+      "SuccessDesc1": "Ha a tranzakció sikeresen lezárult, megszerezted Deopto tokenjeidet!",
+      "SuccessDesc2": "Másodperceken belül megjelenik a walletben."
     }
   }
 }

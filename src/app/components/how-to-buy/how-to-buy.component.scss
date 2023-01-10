@@ -1,5 +1,8 @@
 @import "src/variables.scss";
 
+$howtobuy-cell-width: 22rem;
+$howtobuy-grid-gap: 2rem;
+
 .page-title {
   text-align: center;
   font-size: 2.5em;
@@ -8,20 +11,41 @@
   margin: 1.75rem 0;
 }
 
+.howtobuy-success {
+  // font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 3rem;
+}
+
 // -------------------
 // Grid styles
 // -------------------
 
 .howtobuy-grid {
+  width: min(4*$howtobuy-cell-width + 3*$howtobuy-grid-gap, 100%);
   display: grid;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // grid-template-rows: repeat(6, 1fr);
-
-  grid-template-columns: repeat(auto-fill, 20rem);
-
+  grid-template-columns: repeat(auto-fit, min($howtobuy-cell-width, 100%));
   justify-items: center;
-  grid-gap: 1rem;
+  justify-content: center;
+  grid-gap: $howtobuy-grid-gap;
 
+  & img {
+    width: 100%;
+  }
+
+  & .howtobuy-cell-title {
+    color: $logo-purple;
+    font-size: 1.4em;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem 0rem;
+  }
+
+  & .howtobuy-cell-desc {
+    margin: 1rem 0rem;
+    font-size: 1.2em;
+    height: 4.75rem;
+  }
 }
-
-.howtobuy-cell {}

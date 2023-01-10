@@ -159,7 +159,9 @@
       "Step17Title": "17. Set slippage for swapping",
       "Step17Desc": "Set the slippage to more than 10% (it is needed because the token has a 10% fee)",
       "Step18Title": "18. Swap tokens",
-      "Step18Desc": "The final step. Set up how many tokens you want to buy, press Swap and confirm the transaction."
+      "Step18Desc": "The final step. Set up how many tokens you want to buy, press Swap and confirm the transaction.",
+      "SuccessDesc1": "If the transaction is completed successfully you will have your own Deopto tokens!",
+      "SuccessDesc2": "It will show up in your wallet in a second."
     }
   }
 }
