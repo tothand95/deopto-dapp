@@ -15,6 +15,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HomeModule } from './home/home.module';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+import { HowToBuyComponent } from './components/how-to-buy/how-to-buy.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -27,7 +28,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     VoteComponent,
     VotingProcedureComponent,
     WhitepaperComponent,
-    RoadmapComponent
+    RoadmapComponent,
+    HowToBuyComponent
   ],
   imports: [
     BrowserModule,
