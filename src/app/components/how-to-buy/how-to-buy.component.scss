@@ -46,6 +46,10 @@ $howtobuy-grid-gap: 2rem;
   & .howtobuy-cell-desc {
     margin: 1rem 0rem;
     font-size: 1.2em;
-    height: 4.75rem;
+    height: 5.75rem;
+
+    & span {
+      word-break: break-all;
+    }
   }
 }
