@@ -61,6 +61,14 @@ header {
     letter-spacing: 0.125em;
 
     cursor: pointer;
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      display: none;
+    }
+    
+    @media only screen and (max-width: $mobile-breakpoint) {
+      display: block;
+    }
   }
 }
 
@@ -146,8 +154,8 @@ header .menu-bar-container {
     text-shadow: rgba(black, 0.4) 0px 0px 2px;
 
     @media only screen and (max-width: $mobile-breakpoint) {
-      padding: 1.0rem;
-      font-size: x-large;
+      padding: 0.675rem;
+      font-size: large;
       color: #fafafa;
       width: 70vw;
     }
@@ -194,7 +202,7 @@ header .lang-change-mobile {
     align-items: center;
     gap: 0.5rem;
 
-    font-size: x-large;
+    font-size: large;
     color: #fafafa;
 
     & img {
