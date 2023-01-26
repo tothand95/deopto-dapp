@@ -5,9 +5,9 @@
   height: max(100vh, 62rem);
   background-image: url('/assets/global/home-background.svg');
   background-color: $landing-hero-background;
+  background-attachment: local;
   background-position-x: center;
   background-position-y: top;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -16,7 +16,6 @@
 
   @media only screen and (max-width: $mobile-breakpoint) {
     justify-content: end;
-    background-attachment: local;
     height: 46rem;
     background-position-x: 57%;
   }
